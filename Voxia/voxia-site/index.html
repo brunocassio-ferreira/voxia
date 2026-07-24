@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voxia — Consultoria de Reputação e Narrativa</title>
+<meta name="description" content="A Voxia organiza a voz de marcas e lideranças antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C2921'/%3E%3Cpath d='M50 80C28 80 19 59 19 45C19 27 33 16 50 16' stroke='%233C6E52' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 69C34 69 27 55 27 45C27 32 37 24 50 24' stroke='%23A9764F' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 58C41 58 36 49 36 45C36 38 43 32 50 32' stroke='%23F4F5F1' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#F4F5F1;
+    --paper-2:#ECEEE6;
+    --ink:#1C2321;
+    --ink-soft:#4B5551;
+    --pine:#2B3F35;
+    --pine-deep:#1C2921;
+    --clay:#A9764F;
+    --clay-soft:#C79A72;
+    --hairline:#D7D6C7;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  .serif{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;}
+
+  /* header */
+  header{
+    position:sticky; top:0; z-index:50; background:rgba(244,245,241,.92);
+    backdrop-filter:blur(6px); border-bottom:1px solid var(--hairline);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; gap:20px;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .brand svg{width:30px; height:30px;}
+  .brand span{font-family:Georgia,serif; font-size:20px; color:var(--pine-deep); letter-spacing:.01em;}
+  .navlinks{display:flex; gap:26px; font-size:14px; font-weight:600;}
+  .navlinks a{text-decoration:none; color:var(--ink-soft);}
+  .navlinks a:hover{color:var(--clay);}
+  @media (max-width:720px){.navlinks{display:none;}}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700;
+    padding:11px 20px; border-radius:5px; text-decoration:none; letter-spacing:.01em;
+    border:1px solid transparent; cursor:pointer;
+  }
+  .btn-clay{background:var(--clay); color:#1C1410;}
+  .btn-clay:hover{background:var(--clay-soft);}
+  .btn-outline-dark{background:transparent; border-color:rgba(244,245,241,.35); color:var(--paper);}
+  .btn-outline-dark:hover{border-color:rgba(244,245,241,.7);}
+
+  /* hero */
+  .hero{
+    background:var(--pine-deep);
+    background-image:radial-gradient(circle at 88% 8%, rgba(201,154,114,.16), transparent 45%),
+                      radial-gradient(circle at 6% 92%, rgba(60,110,82,.3), transparent 50%);
+    color:var(--paper); padding:96px 0 100px;
+  }
+  .eyebrow{font-size:12px; text-transform:uppercase; letter-spacing:.16em; font-weight:700; margin:0 0 20px;}
+  .hero .eyebrow{color:var(--clay-soft);}
+  .hero h1{font-size:clamp(32px,5.4vw,54px); line-height:1.16; margin:0 0 22px; text-wrap:balance; max-width:16ch;}
+  .hero .lede{font-size:18px; line-height:1.65; color:rgba(244,245,241,.75); max-width:56ch; margin:0 0 34px;}
+  .hero .ctas{display:flex; gap:12px; flex-wrap:wrap;}
+
+  /* sections */
+  section{padding:88px 0;}
+  section.alt{background:var(--paper-2);}
+  .sec-eyebrow{font-size:11.5px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--clay); margin:0 0 16px;}
+  h2{font-size:clamp(26px,3.4vw,34px); line-height:1.25; color:var(--pine-deep); margin:0 0 26px; text-wrap:balance; max-width:22ch;}
+  .lead-p{font-size:17px; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 18px;}
+  .lead-p:last-child{margin-bottom:0;}
+
+  .grid-4{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:8px;}
+  @media (max-width:680px){.grid-4{grid-template-columns:1fr;}}
+  .card{background:#fff; border:1px solid var(--hairline); border-radius:8px; padding:26px 24px;}
+  .card h3{font-family:Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 10px;}
+  .card p{font-size:15px; line-height:1.65; color:var(--ink-soft); margin:0;}
+
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:8px;}
+  @media (max-width:720px){.grid-3{grid-template-columns:1fr;}}
+  .proof h4{font-family:Georgia,serif; font-size:16.5px; color:var(--pine-deep); margin:0 0 8px; padding-top:14px; border-top:2px solid var(--clay);}
+  .proof p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
+
+  /* noticias */
+  .news-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:8px;}
+  @media (max-width:720px){.news-grid{grid-template-columns:1fr;}}
+  .news-card{background:#fff; border:1px solid var(--hairline); border-radius:8px; overflow:hidden;}
+  .news-card img{width:100%; aspect-ratio:16/10; object-fit:cover; background:var(--pine-deep);}
+  .news-body{padding:20px 22px;}
+  .news-date{font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--clay); font-weight:700; margin:0 0 8px;}
+  .news-card h3{font-family:Georgia,serif; font-size:18px; color:var(--pine-deep); margin:0 0 10px;}
+  .news-card p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
+
+  /* cta final */
+  .cta-final{background:var(--pine-deep); color:var(--paper); text-align:left;}
+  .cta-final h2{color:var(--paper); max-width:20ch;}
+  .cta-final p{color:rgba(244,245,241,.75); font-size:17px; max-width:52ch; margin:0 0 30px;}
+
+  footer{background:var(--pine); color:rgba(244,245,241,.85); padding:52px 0 36px;}
+  .foot-grid{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; padding-bottom:28px; border-bottom:1px solid rgba(244,245,241,.15);}
+  .foot-brand{display:flex; align-items:center; gap:10px;}
+  .foot-brand span{font-family:Georgia,serif; font-size:19px; color:var(--paper);}
+  .foot-links{display:flex; gap:22px; flex-wrap:wrap; font-size:14px;}
+  .foot-links a{text-decoration:none; display:flex; align-items:center; gap:7px;}
+  .foot-links a:hover{color:var(--clay-soft);}
+  .foot-links svg{width:16px; height:16px;}
+  .foot-bottom{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:22px; font-size:12.5px; color:rgba(244,245,241,.5);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap">
+    <a class="brand" href="#topo">
+      <svg viewBox="0 0 100 100" fill="none"><path d="M50 80C28 80 19 59 19 45C19 27 33 16 50 16" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M50 69C34 69 27 55 27 45C27 32 37 24 50 24" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M50 58C41 58 36 49 36 45C36 38 43 32 50 32" stroke="#1C2321" stroke-width="7" stroke-linecap="round"/></svg>
+      <span>voxia</span>
+    </a>
+    <div class="navlinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Método</a>
+      <a href="#noticias">Novidades</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a class="btn btn-clay" id="nav-whatsapp" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </nav>
+</header>
+
+<section class="hero" id="topo">
+  <div class="wrap">
+    <p class="eyebrow" id="hero-eyebrow"></p>
+    <h1 class="serif" id="hero-headline"></h1>
+    <p class="lede" id="hero-lede"></p>
+    <div class="ctas">
+      <a class="btn btn-clay" id="hero-cta" href="#contato"></a>
+      <a class="btn btn-outline-dark" id="hero-cta-secondary" href="#servicos"></a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <p class="sec-eyebrow" id="sobre-eyebrow"></p>
+    <h2 class="serif" id="sobre-titulo"></h2>
+    <div id="sobre-paragrafos"></div>
+  </div>
+</section>
+
+<section class="alt" id="servicos">
+  <div class="wrap">
+    <p class="sec-eyebrow" id="servicos-eyebrow"></p>
+    <h2 class="serif" id="servicos-titulo"></h2>
+    <div class="grid-4" id="servicos-grid"></div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="wrap">
+    <p class="sec-eyebrow" id="metodo-eyebrow"></p>
+    <h2 class="serif" id="metodo-titulo"></h2>
+    <div id="metodo-paragrafos"></div>
+  </div>
+</section>
+
+<section class="alt" id="noticias">
+  <div class="wrap">
+    <p class="sec-eyebrow" id="noticias-eyebrow"></p>
+    <h2 class="serif" id="noticias-titulo"></h2>
+    <div class="news-grid" id="noticias-grid"></div>
+  </div>
+</section>
+
+<section id="prova">
+  <div class="wrap">
+    <p class="sec-eyebrow" id="prova-eyebrow"></p>
+    <h2 class="serif" id="prova-titulo"></h2>
+    <div class="grid-3" id="prova-grid"></div>
+  </div>
+</section>
+
+<section class="cta-final" id="contato">
+  <div class="wrap">
+    <h2 class="serif" id="ctafinal-titulo"></h2>
+    <p id="ctafinal-texto"></p>
+    <a class="btn btn-clay" id="ctafinal-cta" href="#" target="_blank" rel="noopener"></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg viewBox="0 0 100 100" fill="none" width="26" height="26"><path d="M50 80C28 80 19 59 19 45C19 27 33 16 50 16" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M50 69C34 69 27 55 27 45C27 32 37 24 50 24" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M50 58C41 58 36 49 36 45C36 38 43 32 50 32" stroke="#F4F5F1" stroke-width="7" stroke-linecap="round"/></svg>
+        <span>voxia</span>
+      </div>
+      <div class="foot-links">
+        <a id="foot-whatsapp" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8.2 19L3 21z"/></svg>
+          <span id="foot-whatsapp-label"></span>
+        </a>
+        <a id="foot-instagram" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+          <span id="foot-instagram-label"></span>
+        </a>
+        <a id="foot-linkedin" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="10" x2="8" y2="17"/><circle cx="8" cy="7" r="1"/><path d="M12 17v-4.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a id="foot-email" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span id="foot-email-label"></span>
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span id="foot-cidade"></span>
+      <span>© <span id="foot-ano"></span> Voxia. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Conteúdo padrão embutido — usado caso content.json ainda não exista ou não carregue.
+// Depois de editar pelo editor.html, suba o content.json exportado para a hospedagem
+// e a página passa a ler dele automaticamente, sem precisar mexer neste arquivo.
+window.VOXIA_DEFAULT_CONTENT = {
+  hero: {
+    eyebrow: "Consultoria de Reputação e Narrativa",
+    headline: "Cada marca tem uma voz. A Voxia encontra a certa.",
+    lede: "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já esteve numa sala de crise de verdade antes de escrever a primeira linha.",
+    ctaLabel: "Marcar uma conversa",
+    ctaSecondaryLabel: "Ver o que fazemos"
+  },
+  sobre: {
+    eyebrow: "Sobre a Voxia",
+    titulo: "O que fica depois que a sala esvazia",
+    paragrafos: [
+      "Toda marca tem uma reputação, cuide dela ou não. A diferença entre as duas está em quem decide o que vai ser dito antes que alguém precise reagir.",
+      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma marca antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para marcas que ainda não têm essa estrutura montada em casa."
+    ]
+  },
+  servicos: {
+    eyebrow: "O que fazemos",
+    titulo: "Quatro formas de organizar uma voz que hoje está solta",
+    itens: [
+      { titulo: "Diagnóstico de Reputação e Narrativa", texto: "Um raio-x de como sua marca é percebida agora, onde a mensagem está furada e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
+      { titulo: "Narrativa contínua", texto: "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que a marca fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
+      { titulo: "Manual de marca", texto: "Tom, vocabulário, paleta e regras de uso documentados, para qualquer pessoa do time escrever e criar peças com a mesma voz, mesmo sem você por perto." },
+      { titulo: "Prontidão para crise", texto: "Um plano pronto antes da crise chegar: quem fala, o que se diz nas primeiras horas, e uma rotina de resposta já testada, não inventada no susto." }
+    ]
+  },
+  metodo: {
+    eyebrow: "Como trabalhamos",
+    titulo: "Estratégia com uma pessoa só decidindo o que importa",
+    paragrafos: [
+      "Diagnóstico, direção de narrativa e escrita ficam sempre com quem assina o trabalho. Nenhuma etapa de julgamento é passada para um sistema automático. O apoio de inteligência artificial entra só na produção: organizar calendário, esboçar variações de texto, resumir pauta. Tudo revisado à mão antes de sair.",
+      "Quando o projeto pede vídeo ou peças gráficas, entra uma rede pequena de parceiros freelance, escolhidos a dedo e acionados projeto a projeto. Isso mantém a operação enxuta e o preço abaixo de uma agência com estrutura fixa, sem abrir mão de quem entende de reputação de verdade."
+    ]
+  },
+  noticias: {
+    eyebrow: "Novidades",
+    titulo: "Atualizações da Voxia",
+    itens: [
+      {
+        data: "Julho de 2026",
+        titulo: "Voxia no ar",
+        foto: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
+        texto: "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
+      }
+    ]
+  },
+  prova: {
+    eyebrow: "Por que a Voxia",
+    titulo: "Repertório que não veio de curso de fim de semana",
+    itens: [
+      { titulo: "Crise administrada de verdade", texto: "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
+      { titulo: "Reconhecimento nacional", texto: "Prêmios das principais premiações de comunicação corporativa do país, e reconhecimento em gestão de pessoas e engajamento interno." },
+      { titulo: "Estrutura sob medida", texto: "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
+    ]
+  },
+  ctaFinal: {
+    titulo: "Sua marca já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
+    texto: "Uma conversa de trinta minutos já mostra por onde começar.",
+    ctaLabel: "Marcar uma conversa"
+  },
+  contato: {
+    whatsapp: "5551989927117",
+    whatsappDisplay: "(51) 98992-7117",
+    instagram: "somos.voxia",
+    linkedin: "https://www.linkedin.com/company/somosvoxia",
+    email: "contato@somosvoxia.com",
+    cidade: "Porto Alegre, RS — atendimento para todo o Brasil"
+  }
+};
+
+function waLink(numero, textoPreenchido){
+  var msg = textoPreenchido ? "?text=" + encodeURIComponent(textoPreenchido) : "";
+  return "https://wa.me/" + numero + msg;
+}
+
+function render(content){
+  var c = content;
+
+  document.getElementById("hero-eyebrow").textContent = c.hero.eyebrow;
+  document.getElementById("hero-headline").textContent = c.hero.headline;
+  document.getElementById("hero-lede").textContent = c.hero.lede;
+  document.getElementById("hero-cta").textContent = c.hero.ctaLabel;
+  document.getElementById("hero-cta-secondary").textContent = c.hero.ctaSecondaryLabel;
+
+  document.getElementById("sobre-eyebrow").textContent = c.sobre.eyebrow;
+  document.getElementById("sobre-titulo").textContent = c.sobre.titulo;
+  var sobreWrap = document.getElementById("sobre-paragrafos");
+  sobreWrap.innerHTML = "";
+  c.sobre.paragrafos.forEach(function(p){
+    var el = document.createElement("p"); el.className = "lead-p"; el.textContent = p;
+    sobreWrap.appendChild(el);
+  });
+
+  document.getElementById("servicos-eyebrow").textContent = c.servicos.eyebrow;
+  document.getElementById("servicos-titulo").textContent = c.servicos.titulo;
+  var svcGrid = document.getElementById("servicos-grid");
+  svcGrid.innerHTML = "";
+  c.servicos.itens.forEach(function(item){
+    var card = document.createElement("div"); card.className = "card";
+    var h3 = document.createElement("h3"); h3.textContent = item.titulo;
+    var p = document.createElement("p"); p.textContent = item.texto;
+    card.appendChild(h3); card.appendChild(p); svcGrid.appendChild(card);
+  });
+
+  document.getElementById("metodo-eyebrow").textContent = c.metodo.eyebrow;
+  document.getElementById("metodo-titulo").textContent = c.metodo.titulo;
+  var metWrap = document.getElementById("metodo-paragrafos");
+  metWrap.innerHTML = "";
+  c.metodo.paragrafos.forEach(function(p){
+    var el = document.createElement("p"); el.className = "lead-p"; el.textContent = p;
+    metWrap.appendChild(el);
+  });
+
+  document.getElementById("noticias-eyebrow").textContent = c.noticias.eyebrow;
+  document.getElementById("noticias-titulo").textContent = c.noticias.titulo;
+  var newsGrid = document.getElementById("noticias-grid");
+  newsGrid.innerHTML = "";
+  c.noticias.itens.forEach(function(item){
+    var card = document.createElement("div"); card.className = "news-card";
+    var img = document.createElement("img"); img.src = item.foto; img.alt = item.titulo;
+    var body = document.createElement("div"); body.className = "news-body";
+    var date = document.createElement("p"); date.className = "news-date"; date.textContent = item.data;
+    var h3 = document.createElement("h3"); h3.textContent = item.titulo;
+    var p = document.createElement("p"); p.textContent = item.texto;
+    body.appendChild(date); body.appendChild(h3); body.appendChild(p);
+    card.appendChild(img); card.appendChild(body); newsGrid.appendChild(card);
+  });
+
+  document.getElementById("prova-eyebrow").textContent = c.prova.eyebrow;
+  document.getElementById("prova-titulo").textContent = c.prova.titulo;
+  var provaGrid = document.getElementById("prova-grid");
+  provaGrid.innerHTML = "";
+  c.prova.itens.forEach(function(item){
+    var wrap = document.createElement("div"); wrap.className = "proof";
+    var h4 = document.createElement("h4"); h4.textContent = item.titulo;
+    var p = document.createElement("p"); p.textContent = item.texto;
+    wrap.appendChild(h4); wrap.appendChild(p); provaGrid.appendChild(wrap);
+  });
+
+  document.getElementById("ctafinal-titulo").textContent = c.ctaFinal.titulo;
+  document.getElementById("ctafinal-texto").textContent = c.ctaFinal.texto;
+  var ctaBtn = document.getElementById("ctafinal-cta");
+  ctaBtn.textContent = c.ctaFinal.ctaLabel;
+  ctaBtn.href = waLink(c.contato.whatsapp, "Oi! Vim pelo site da Voxia e queria marcar uma conversa.");
+
+  var navWa = document.getElementById("nav-whatsapp");
+  navWa.href = waLink(c.contato.whatsapp, "Oi! Vim pelo site da Voxia e queria marcar uma conversa.");
+
+  document.getElementById("foot-whatsapp").href = waLink(c.contato.whatsapp);
+  document.getElementById("foot-whatsapp-label").textContent = c.contato.whatsappDisplay;
+  document.getElementById("foot-instagram").href = "https://instagram.com/" + c.contato.instagram.replace(/^@/, "");
+  document.getElementById("foot-instagram-label").textContent = "@" + c.contato.instagram.replace(/^@/, "");
+  document.getElementById("foot-linkedin").href = c.contato.linkedin;
+  document.getElementById("foot-email").href = "mailto:" + c.contato.email;
+  document.getElementById("foot-email-label").textContent = c.contato.email;
+  document.getElementById("foot-cidade").textContent = c.contato.cidade;
+  document.getElementById("foot-ano").textContent = new Date().getFullYear();
+}
+
+// tenta carregar content.json (o arquivo que o editor.html exporta);
+// se não existir ainda ou a página estiver sendo aberta localmente sem servidor, usa o conteúdo padrão embutido.
+fetch("content.json", {cache: "no-store"})
+  .then(function(r){ if(!r.ok) throw new Error("sem content.json"); return r.json(); })
+  .then(function(data){ render(data); })
+  .catch(function(){ render(window.VOXIA_DEFAULT_CONTENT); });
+</script>
+
+</body>
+</html>

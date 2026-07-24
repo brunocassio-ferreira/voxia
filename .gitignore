@@ -1,0 +1,18 @@
+# Materiais pessoais de recolocação (não devem ir para o repositório público)
+CLAUDE.md
+Novo Emprego Bruno/
+
+# Configuração e agentes do Claude Code
+.claude/
+
+# Pesquisa e análise interna da Voxia (não é conteúdo de publicação)
+Voxia/Pesquisa-Empreendimento-Reputacao.pdf
+Voxia/pesquisa-empreendimento-crivo.html
+
+# Manual de marca da Voxia (mantido privado)
+Voxia/Identidade Visual/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini

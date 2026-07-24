@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "eyebrow": "Consultoria de Reputação e Narrativa",
+    "headline": "Cada marca tem uma voz. A Voxia encontra a certa.",
+    "lede": "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já esteve numa sala de crise de verdade antes de escrever a primeira linha.",
+    "ctaLabel": "Marcar uma conversa",
+    "ctaSecondaryLabel": "Ver o que fazemos"
+  },
+  "sobre": {
+    "eyebrow": "Sobre a Voxia",
+    "titulo": "O que fica depois que a sala esvazia",
+    "paragrafos": [
+      "Toda marca tem uma reputação, cuide dela ou não. A diferença entre as duas está em quem decide o que vai ser dito antes que alguém precise reagir.",
+      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma marca antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para marcas que ainda não têm essa estrutura montada em casa."
+    ]
+  },
+  "servicos": {
+    "eyebrow": "O que fazemos",
+    "titulo": "Quatro formas de organizar uma voz que hoje está solta",
+    "itens": [
+      { "titulo": "Diagnóstico de Reputação e Narrativa", "texto": "Um raio-x de como sua marca é percebida agora, onde a mensagem está furada e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
+      { "titulo": "Narrativa contínua", "texto": "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que a marca fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
+      { "titulo": "Manual de marca", "texto": "Tom, vocabulário, paleta e regras de uso documentados, para qualquer pessoa do time escrever e criar peças com a mesma voz, mesmo sem você por perto." },
+      { "titulo": "Prontidão para crise", "texto": "Um plano pronto antes da crise chegar: quem fala, o que se diz nas primeiras horas, e uma rotina de resposta já testada, não inventada no susto." }
+    ]
+  },
+  "metodo": {
+    "eyebrow": "Como trabalhamos",
+    "titulo": "Estratégia com uma pessoa só decidindo o que importa",
+    "paragrafos": [
+      "Diagnóstico, direção de narrativa e escrita ficam sempre com quem assina o trabalho. Nenhuma etapa de julgamento é passada para um sistema automático. O apoio de inteligência artificial entra só na produção: organizar calendário, esboçar variações de texto, resumir pauta. Tudo revisado à mão antes de sair.",
+      "Quando o projeto pede vídeo ou peças gráficas, entra uma rede pequena de parceiros freelance, escolhidos a dedo e acionados projeto a projeto. Isso mantém a operação enxuta e o preço abaixo de uma agência com estrutura fixa, sem abrir mão de quem entende de reputação de verdade."
+    ]
+  },
+  "noticias": {
+    "eyebrow": "Novidades",
+    "titulo": "Atualizações da Voxia",
+    "itens": [
+      {
+        "data": "Julho de 2026",
+        "titulo": "Voxia no ar",
+        "foto": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
+        "texto": "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
+      }
+    ]
+  },
+  "prova": {
+    "eyebrow": "Por que a Voxia",
+    "titulo": "Repertório que não veio de curso de fim de semana",
+    "itens": [
+      { "titulo": "Crise administrada de verdade", "texto": "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
+      { "titulo": "Reconhecimento nacional", "texto": "Prêmios das principais premiações de comunicação corporativa do país, e reconhecimento em gestão de pessoas e engajamento interno." },
+      { "titulo": "Estrutura sob medida", "texto": "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
+    ]
+  },
+  "ctaFinal": {
+    "titulo": "Sua marca já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
+    "texto": "Uma conversa de trinta minutos já mostra por onde começar.",
+    "ctaLabel": "Marcar uma conversa"
+  },
+  "contato": {
+    "whatsapp": "5551989927117",
+    "whatsappDisplay": "(51) 98992-7117",
+    "instagram": "somos.voxia",
+    "linkedin": "https://www.linkedin.com/company/somosvoxia",
+    "email": "contato@somosvoxia.com",
+    "cidade": "Porto Alegre, RS — atendimento para todo o Brasil"
+  }
+}

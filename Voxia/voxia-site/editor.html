@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor do site — Voxia</title>
+<style>
+  :root{
+    --paper:#F4F5F1; --paper-2:#ECEEE6; --ink:#1C2321; --ink-soft:#4B5551;
+    --pine:#2B3F35; --pine-deep:#1C2921; --clay:#A9764F; --clay-soft:#C79A72;
+    --hairline:#D7D6C7; --good:#3C6E52; --bad:#A0453A;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.6;
+  }
+  .topbar{
+    position:sticky; top:0; z-index:20; background:var(--pine-deep); color:var(--paper);
+    padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .topbar .brand{font-family:Georgia,serif; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .topbar .brand small{font-family:"Segoe UI",sans-serif; font-size:11px; color:var(--clay-soft); text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
+  .topbar .actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  .btn{
+    font-size:13px; font-weight:700; padding:9px 16px; border-radius:5px; border:1px solid transparent;
+    cursor:pointer; letter-spacing:.01em; text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+  }
+  .btn-clay{background:var(--clay); color:#1C1410;}
+  .btn-clay:hover{background:var(--clay-soft);}
+  .btn-ghost{background:transparent; border-color:rgba(244,245,241,.3); color:var(--paper);}
+  .btn-ghost:hover{border-color:rgba(244,245,241,.6);}
+  .btn-danger{background:transparent; border-color:var(--bad); color:#E8A99B; font-size:12px; padding:6px 10px;}
+  .btn-danger:hover{background:rgba(160,69,58,.12);}
+  .btn-add{background:var(--paper-2); border-color:var(--hairline); color:var(--pine-deep); font-size:12.5px; padding:8px 14px;}
+  .btn-add:hover{background:#fff;}
+  #file-input{display:none;}
+
+  .status{font-size:12px; color:var(--clay-soft);}
+
+  .wrap{max-width:820px; margin:0 auto; padding:36px 24px 100px;}
+  .panel{background:#fff; border:1px solid var(--hairline); border-radius:10px; padding:26px 26px 22px; margin-bottom:22px;}
+  .panel h2{
+    font-family:Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 4px;
+  }
+  .panel .hint{font-size:12.5px; color:var(--ink-soft); margin:0 0 20px;}
+  label{display:block; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin:16px 0 6px;}
+  label:first-of-type{margin-top:0;}
+  input[type=text], input[type=url], input[type=email], input[type=tel], textarea{
+    width:100%; font-family:inherit; font-size:14.5px; padding:10px 12px; border:1px solid var(--hairline);
+    border-radius:6px; background:var(--paper); color:var(--ink);
+  }
+  input:focus, textarea:focus{outline:2px solid var(--clay-soft); outline-offset:1px;}
+  textarea{resize:vertical; min-height:64px; line-height:1.55;}
+
+  .item-card{
+    border:1px solid var(--hairline); border-radius:8px; padding:16px 18px; margin:10px 0;
+    background:var(--paper-2); position:relative;
+  }
+  .item-card .item-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;}
+  .item-card .item-top span{font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--clay);}
+
+  .list-actions{margin-top:12px;}
+
+  .news-photo-row{display:flex; gap:14px; align-items:flex-start; margin-top:6px;}
+  .news-photo-row img{width:96px; height:64px; object-fit:cover; border-radius:5px; border:1px solid var(--hairline); background:var(--pine-deep); flex:none;}
+  .news-photo-row input[type=file]{display:block; font-size:12.5px;}
+
+  footer.tips{max-width:820px; margin:0 auto 60px; padding:0 24px; font-size:13px; color:var(--ink-soft);}
+  footer.tips h3{font-family:Georgia,serif; color:var(--pine-deep); font-size:16px; margin:0 0 8px;}
+  footer.tips ol{padding-left:20px; margin:0;}
+  footer.tips li{margin-bottom:8px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">voxia <small>editor do site</small></div>
+  <div class="actions">
+    <span class="status" id="status-label">rascunho salvo automaticamente neste navegador</span>
+    <button class="btn btn-ghost" id="btn-load">Carregar content.json</button>
+    <button class="btn btn-ghost" id="btn-reset">Recomeçar do padrão</button>
+    <button class="btn btn-clay" id="btn-export">Baixar content.json</button>
+  </div>
+  <input type="file" id="file-input" accept="application/json">
+</div>
+
+<div class="wrap">
+
+  <div class="panel">
+    <h2>Abertura (Hero)</h2>
+    <p class="hint">A primeira tela do site.</p>
+    <label>Selo acima do título</label>
+    <input type="text" id="hero-eyebrow">
+    <label>Título principal</label>
+    <textarea id="hero-headline" rows="2"></textarea>
+    <label>Texto de apoio</label>
+    <textarea id="hero-lede" rows="3"></textarea>
+    <label>Texto do botão principal</label>
+    <input type="text" id="hero-ctaLabel">
+    <label>Texto do botão secundário</label>
+    <input type="text" id="hero-ctaSecondaryLabel">
+  </div>
+
+  <div class="panel">
+    <h2>Sobre a Voxia</h2>
+    <label>Selo da seção</label>
+    <input type="text" id="sobre-eyebrow">
+    <label>Título da seção</label>
+    <textarea id="sobre-titulo" rows="2"></textarea>
+    <label>Parágrafos</label>
+    <div id="sobre-paragrafos-list"></div>
+    <div class="list-actions"><button class="btn btn-add" data-add="sobre.paragrafos">+ adicionar parágrafo</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>Serviços</h2>
+    <label>Selo da seção</label>
+    <input type="text" id="servicos-eyebrow">
+    <label>Título da seção</label>
+    <textarea id="servicos-titulo" rows="2"></textarea>
+    <label>Cards de serviço</label>
+    <div id="servicos-itens-list"></div>
+    <div class="list-actions"><button class="btn btn-add" data-add="servicos.itens">+ adicionar serviço</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>Método</h2>
+    <label>Selo da seção</label>
+    <input type="text" id="metodo-eyebrow">
+    <label>Título da seção</label>
+    <textarea id="metodo-titulo" rows="2"></textarea>
+    <label>Parágrafos</label>
+    <div id="metodo-paragrafos-list"></div>
+    <div class="list-actions"><button class="btn btn-add" data-add="metodo.paragrafos">+ adicionar parágrafo</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>Novidades (galeria de notícias)</h2>
+    <p class="hint">Cada item vira um card com foto, data, título e um texto corrido. O mais novo pode ficar no topo da lista.</p>
+    <label>Selo da seção</label>
+    <input type="text" id="noticias-eyebrow">
+    <label>Título da seção</label>
+    <textarea id="noticias-titulo" rows="2"></textarea>
+    <div id="noticias-itens-list"></div>
+    <div class="list-actions"><button class="btn btn-add" data-add-news="1">+ adicionar novidade</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>Prova / diferenciais</h2>
+    <label>Selo da seção</label>
+    <input type="text" id="prova-eyebrow">
+    <label>Título da seção</label>
+    <textarea id="prova-titulo" rows="2"></textarea>
+    <div id="prova-itens-list"></div>
+    <div class="list-actions"><button class="btn btn-add" data-add="prova.itens">+ adicionar item</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>Chamada final</h2>
+    <label>Título</label>
+    <textarea id="cta-titulo" rows="2"></textarea>
+    <label>Texto de apoio</label>
+    <textarea id="cta-texto" rows="2"></textarea>
+    <label>Texto do botão</label>
+    <input type="text" id="cta-ctaLabel">
+  </div>
+
+  <div class="panel">
+    <h2>Contato</h2>
+    <label>WhatsApp (só números, com DDI e DDD — ex. 5551989927117)</label>
+    <input type="tel" id="contato-whatsapp">
+    <label>WhatsApp para exibir (ex. (51) 98992-7117)</label>
+    <input type="text" id="contato-whatsappDisplay">
+    <label>Instagram (usuário, sem @)</label>
+    <input type="text" id="contato-instagram">
+    <label>Link do LinkedIn</label>
+    <input type="url" id="contato-linkedin">
+    <label>E-mail</label>
+    <input type="email" id="contato-email">
+    <label>Cidade / atendimento</label>
+    <input type="text" id="contato-cidade">
+  </div>
+
+</div>
+
+<footer class="tips">
+  <h3>Como atualizar o site</h3>
+  <ol>
+    <li>Edite os campos acima. Tudo fica salvo automaticamente neste navegador enquanto você trabalha.</li>
+    <li>Clique em <strong>Baixar content.json</strong>. Um arquivo novo vai para sua pasta de downloads.</li>
+    <li>Envie esse arquivo para a hospedagem do site, substituindo o content.json que já está lá (pelo gerenciador de arquivos da hospedagem). Não precisa mexer no index.html.</li>
+    <li>Para continuar editando depois, abra este editor de novo e clique em <strong>Carregar content.json</strong> para trazer o conteúdo atual.</li>
+  </ol>
+</footer>
+
+<script>
+var STORAGE_KEY = "voxia_editor_draft_v1";
+
+var DEFAULT_CONTENT = {
+  "hero": {
+    "eyebrow": "Consultoria de Reputação e Narrativa",
+    "headline": "Cada marca tem uma voz. A Voxia encontra a certa.",
+    "lede": "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já esteve numa sala de crise de verdade antes de escrever a primeira linha.",
+    "ctaLabel": "Marcar uma conversa",
+    "ctaSecondaryLabel": "Ver o que fazemos"
+  },
+  "sobre": {
+    "eyebrow": "Sobre a Voxia",
+    "titulo": "O que fica depois que a sala esvazia",
+    "paragrafos": [
+      "Toda marca tem uma reputação, cuide dela ou não. A diferença entre as duas está em quem decide o que vai ser dito antes que alguém precise reagir.",
+      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma marca antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para marcas que ainda não têm essa estrutura montada em casa."
+    ]
+  },
+  "servicos": {
+    "eyebrow": "O que fazemos",
+    "titulo": "Quatro formas de organizar uma voz que hoje está solta",
+    "itens": [
+      { "titulo": "Diagnóstico de Reputação e Narrativa", "texto": "Um raio-x de como sua marca é percebida agora, onde a mensagem está furada e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
+      { "titulo": "Narrativa contínua", "texto": "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que a marca fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
+      { "titulo": "Manual de marca", "texto": "Tom, vocabulário, paleta e regras de uso documentados, para qualquer pessoa do time escrever e criar peças com a mesma voz, mesmo sem você por perto." },
+      { "titulo": "Prontidão para crise", "texto": "Um plano pronto antes da crise chegar: quem fala, o que se diz nas primeiras horas, e uma rotina de resposta já testada, não inventada no susto." }
+    ]
+  },
+  "metodo": {
+    "eyebrow": "Como trabalhamos",
+    "titulo": "Estratégia com uma pessoa só decidindo o que importa",
+    "paragrafos": [
+      "Diagnóstico, direção de narrativa e escrita ficam sempre com quem assina o trabalho. Nenhuma etapa de julgamento é passada para um sistema automático. O apoio de inteligência artificial entra só na produção: organizar calendário, esboçar variações de texto, resumir pauta. Tudo revisado à mão antes de sair.",
+      "Quando o projeto pede vídeo ou peças gráficas, entra uma rede pequena de parceiros freelance, escolhidos a dedo e acionados projeto a projeto. Isso mantém a operação enxuta e o preço abaixo de uma agência com estrutura fixa, sem abrir mão de quem entende de reputação de verdade."
+    ]
+  },
+  "noticias": {
+    "eyebrow": "Novidades",
+    "titulo": "Atualizações da Voxia",
+    "itens": [
+      {
+        "data": "Julho de 2026",
+        "titulo": "Voxia no ar",
+        "foto": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
+        "texto": "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
+      }
+    ]
+  },
+  "prova": {
+    "eyebrow": "Por que a Voxia",
+    "titulo": "Repertório que não veio de curso de fim de semana",
+    "itens": [
+      { "titulo": "Crise administrada de verdade", "texto": "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
+      { "titulo": "Reconhecimento nacional", "texto": "Prêmios das principais premiações de comunicação corporativa do país, e reconhecimento em gestão de pessoas e engajamento interno." },
+      { "titulo": "Estrutura sob medida", "texto": "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
+    ]
+  },
+  "ctaFinal": {
+    "titulo": "Sua marca já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
+    "texto": "Uma conversa de trinta minutos já mostra por onde começar.",
+    "ctaLabel": "Marcar uma conversa"
+  },
+  "contato": {
+    "whatsapp": "5551989927117",
+    "whatsappDisplay": "(51) 98992-7117",
+    "instagram": "somos.voxia",
+    "linkedin": "https://www.linkedin.com/company/somosvoxia",
+    "email": "contato@somosvoxia.com",
+    "cidade": "Porto Alegre, RS — atendimento para todo o Brasil"
+  }
+};
+
+var state = null;
+
+function deepClone(o){ return JSON.parse(JSON.stringify(o)); }
+
+function loadInitialState(){
+  var saved = localStorage.getItem(STORAGE_KEY);
+  if(saved){
+    try{ return JSON.parse(saved); }catch(e){}
+  }
+  return deepClone(DEFAULT_CONTENT);
+}
+
+function saveDraft(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  var el = document.getElementById("status-label");
+  el.textContent = "rascunho salvo às " + new Date().toLocaleTimeString("pt-BR");
+}
+
+function bindSimple(id, getPath){
+  var el = document.getElementById(id);
+  var path = getPath.split(".");
+  var val = state;
+  for(var i=0;i<path.length;i++) val = val[path[i]];
+  el.value = val;
+  el.addEventListener("input", function(){
+    var obj = state;
+    for(var i=0;i<path.length-1;i++) obj = obj[path[i]];
+    obj[path[path.length-1]] = el.value;
+    saveDraft();
+  });
+}
+
+function renderParagraphList(containerId, arrPath){
+  var container = document.getElementById(containerId);
+  var parts = arrPath.split(".");
+  var arr = state[parts[0]][parts[1]];
+  container.innerHTML = "";
+  arr.forEach(function(text, idx){
+    var card = document.createElement("div");
+    card.className = "item-card";
+    var top = document.createElement("div"); top.className = "item-top";
+    var label = document.createElement("span"); label.textContent = "parágrafo " + (idx+1);
+    var del = document.createElement("button"); del.className = "btn btn-danger"; del.textContent = "remover";
+    del.addEventListener("click", function(){
+      arr.splice(idx,1); saveDraft(); renderParagraphList(containerId, arrPath);
+    });
+    top.appendChild(label); top.appendChild(del);
+    var ta = document.createElement("textarea"); ta.rows = 3; ta.value = text;
+    ta.addEventListener("input", function(){ arr[idx] = ta.value; saveDraft(); });
+    card.appendChild(top); card.appendChild(ta);
+    container.appendChild(card);
+  });
+}
+
+function renderItemList(containerId, arrPath){
+  var container = document.getElementById(containerId);
+  var parts = arrPath.split(".");
+  var arr = state[parts[0]][parts[1]];
+  container.innerHTML = "";
+  arr.forEach(function(item, idx){
+    var card = document.createElement("div");
+    card.className = "item-card";
+    var top = document.createElement("div"); top.className = "item-top";
+    var label = document.createElement("span"); label.textContent = "item " + (idx+1);
+    var del = document.createElement("button"); del.className = "btn btn-danger"; del.textContent = "remover";
+    del.addEventListener("click", function(){
+      arr.splice(idx,1); saveDraft(); renderItemList(containerId, arrPath);
+    });
+    top.appendChild(label); top.appendChild(del);
+
+    var titleInput = document.createElement("input"); titleInput.type = "text"; titleInput.value = item.titulo;
+    titleInput.style.marginTop = "8px"; titleInput.placeholder = "Título";
+    titleInput.addEventListener("input", function(){ item.titulo = titleInput.value; saveDraft(); });
+
+    var textArea = document.createElement("textarea"); textArea.rows = 3; textArea.value = item.texto;
+    textArea.style.marginTop = "8px"; textArea.placeholder = "Texto";
+    textArea.addEventListener("input", function(){ item.texto = textArea.value; saveDraft(); });
+
+    card.appendChild(top); card.appendChild(titleInput); card.appendChild(textArea);
+    container.appendChild(card);
+  });
+}
+
+function resizeImageToDataUrl(file, callback){
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var img = new Image();
+    img.onload = function(){
+      var maxW = 960;
+      var scale = Math.min(1, maxW / img.width);
+      var w = Math.round(img.width * scale);
+      var h = Math.round(img.height * scale);
+      var canvas = document.createElement("canvas");
+      canvas.width = w; canvas.height = h;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, w, h);
+      callback(canvas.toDataURL("image/jpeg", 0.82));
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function renderNewsList(){
+  var container = document.getElementById("noticias-itens-list");
+  var arr = state.noticias.itens;
+  container.innerHTML = "";
+  arr.forEach(function(item, idx){
+    var card = document.createElement("div");
+    card.className = "item-card";
+    var top = document.createElement("div"); top.className = "item-top";
+    var label = document.createElement("span"); label.textContent = "novidade " + (idx+1);
+    var del = document.createElement("button"); del.className = "btn btn-danger"; del.textContent = "remover";
+    del.addEventListener("click", function(){
+      arr.splice(idx,1); saveDraft(); renderNewsList();
+    });
+    top.appendChild(label); top.appendChild(del);
+    card.appendChild(top);
+
+    var dataInput = document.createElement("input"); dataInput.type = "text"; dataInput.value = item.data;
+    dataInput.style.marginTop = "8px"; dataInput.placeholder = "Data (ex. Julho de 2026)";
+    dataInput.addEventListener("input", function(){ item.data = dataInput.value; saveDraft(); });
+
+    var titleInput = document.createElement("input"); titleInput.type = "text"; titleInput.value = item.titulo;
+    titleInput.style.marginTop = "8px"; titleInput.placeholder = "Título";
+    titleInput.addEventListener("input", function(){ item.titulo = titleInput.value; saveDraft(); });
+
+    var photoRow = document.createElement("div"); photoRow.className = "news-photo-row";
+    var img = document.createElement("img"); img.src = item.foto;
+    var fileWrap = document.createElement("div");
+    var fileInput = document.createElement("input"); fileInput.type = "file"; fileInput.accept = "image/*";
+    fileInput.addEventListener("change", function(){
+      if(fileInput.files && fileInput.files[0]){
+        resizeImageToDataUrl(fileInput.files[0], function(dataUrl){
+          item.foto = dataUrl; img.src = dataUrl; saveDraft();
+        });
+      }
+    });
+    fileWrap.appendChild(fileInput);
+    photoRow.appendChild(img); photoRow.appendChild(fileWrap);
+
+    var textArea = document.createElement("textarea"); textArea.rows = 3; textArea.value = item.texto;
+    textArea.style.marginTop = "8px"; textArea.placeholder = "Texto corrido";
+    textArea.addEventListener("input", function(){ item.texto = textArea.value; saveDraft(); });
+
+    card.appendChild(dataInput); card.appendChild(titleInput); card.appendChild(photoRow); card.appendChild(textArea);
+    container.appendChild(card);
+  });
+}
+
+var PLACEHOLDER_NEWS_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E";
+
+function renderAll(){
+  bindSimple("hero-eyebrow", "hero.eyebrow");
+  bindSimple("hero-headline", "hero.headline");
+  bindSimple("hero-lede", "hero.lede");
+  bindSimple("hero-ctaLabel", "hero.ctaLabel");
+  bindSimple("hero-ctaSecondaryLabel", "hero.ctaSecondaryLabel");
+
+  bindSimple("sobre-eyebrow", "sobre.eyebrow");
+  bindSimple("sobre-titulo", "sobre.titulo");
+  renderParagraphList("sobre-paragrafos-list", "sobre.paragrafos");
+
+  bindSimple("servicos-eyebrow", "servicos.eyebrow");
+  bindSimple("servicos-titulo", "servicos.titulo");
+  renderItemList("servicos-itens-list", "servicos.itens");
+
+  bindSimple("metodo-eyebrow", "metodo.eyebrow");
+  bindSimple("metodo-titulo", "metodo.titulo");
+  renderParagraphList("metodo-paragrafos-list", "metodo.paragrafos");
+
+  bindSimple("noticias-eyebrow", "noticias.eyebrow");
+  bindSimple("noticias-titulo", "noticias.titulo");
+  renderNewsList();
+
+  bindSimple("prova-eyebrow", "prova.eyebrow");
+  bindSimple("prova-titulo", "prova.titulo");
+  renderItemList("prova-itens-list", "prova.itens");
+
+  bindSimple("cta-titulo", "ctaFinal.titulo");
+  bindSimple("cta-texto", "ctaFinal.texto");
+  bindSimple("cta-ctaLabel", "ctaFinal.ctaLabel");
+
+  bindSimple("contato-whatsapp", "contato.whatsapp");
+  bindSimple("contato-whatsappDisplay", "contato.whatsappDisplay");
+  bindSimple("contato-instagram", "contato.instagram");
+  bindSimple("contato-linkedin", "contato.linkedin");
+  bindSimple("contato-email", "contato.email");
+  bindSimple("contato-cidade", "contato.cidade");
+}
+
+document.addEventListener("click", function(e){
+  var addPath = e.target.getAttribute && e.target.getAttribute("data-add");
+  if(addPath){
+    var parts = addPath.split(".");
+    var arr = state[parts[0]][parts[1]];
+    if(parts[1] === "paragrafos"){ arr.push(""); }
+    else { arr.push({titulo:"", texto:""}); }
+    saveDraft(); renderAll();
+  }
+  if(e.target.getAttribute && e.target.getAttribute("data-add-news")){
+    state.noticias.itens.unshift({data:"", titulo:"", foto:PLACEHOLDER_NEWS_IMG, texto:""});
+    saveDraft(); renderAll();
+  }
+});
+
+document.getElementById("btn-export").addEventListener("click", function(){
+  var blob = new Blob([JSON.stringify(state, null, 2)], {type:"application/json"});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url; a.download = "content.json";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById("btn-reset").addEventListener("click", function(){
+  if(confirm("Isso substitui o rascunho atual pelo conteúdo padrão original. Continuar?")){
+    state = deepClone(DEFAULT_CONTENT);
+    saveDraft(); renderAll();
+  }
+});
+
+document.getElementById("btn-load").addEventListener("click", function(){
+  document.getElementById("file-input").click();
+});
+document.getElementById("file-input").addEventListener("change", function(e){
+  var file = e.target.files[0];
+  if(!file) return;
+  var reader = new FileReader();
+  reader.onload = function(evt){
+    try{
+      state = JSON.parse(evt.target.result);
+      saveDraft(); renderAll();
+    }catch(err){
+      alert("Esse arquivo não é um content.json válido.");
+    }
+  };
+  reader.readAsText(file);
+});
+
+state = loadInitialState();
+renderAll();
+</script>
+
+</body>
+</html>
