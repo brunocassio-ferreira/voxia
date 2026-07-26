@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Editor do site — Voxia</title>
 <style>
@@ -13,14 +13,14 @@
   *{box-sizing:border-box;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.6;
+    font-family:"IBM Plex Sans","Segoe UI","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.6;
   }
   .topbar{
     position:sticky; top:0; z-index:20; background:var(--pine-deep); color:var(--paper);
     padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
   }
-  .topbar .brand{font-family:Georgia,serif; font-size:18px; display:flex; align-items:center; gap:8px;}
-  .topbar .brand small{font-family:"Segoe UI",sans-serif; font-size:11px; color:var(--clay-soft); text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
+  .topbar .brand{font-family:"Lora",Georgia,serif; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .topbar .brand small{font-family:"IBM Plex Sans","Segoe UI",sans-serif; font-size:11px; color:var(--clay-soft); text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
   .topbar .actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
   .btn{
     font-size:13px; font-weight:700; padding:9px 16px; border-radius:5px; border:1px solid transparent;
@@ -41,7 +41,7 @@
   .wrap{max-width:820px; margin:0 auto; padding:36px 24px 100px;}
   .panel{background:#fff; border:1px solid var(--hairline); border-radius:10px; padding:26px 26px 22px; margin-bottom:22px;}
   .panel h2{
-    font-family:Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 4px;
+    font-family:"Lora",Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 4px;
   }
   .panel .hint{font-size:12.5px; color:var(--ink-soft); margin:0 0 20px;}
   label{display:block; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin:16px 0 6px;}
@@ -65,9 +65,12 @@
   .news-photo-row{display:flex; gap:14px; align-items:flex-start; margin-top:6px;}
   .news-photo-row img{width:96px; height:64px; object-fit:cover; border-radius:5px; border:1px solid var(--hairline); background:var(--pine-deep); flex:none;}
   .news-photo-row input[type=file]{display:block; font-size:12.5px;}
+  .news-destaque-row{display:flex; align-items:center; gap:8px; margin-top:10px;}
+  .news-destaque-row input[type=checkbox]{width:16px; height:16px; margin:0;}
+  .news-destaque-row label{margin:0; text-transform:none; font-weight:600; font-size:13px; letter-spacing:0; color:var(--ink);}
 
   footer.tips{max-width:820px; margin:0 auto 60px; padding:0 24px; font-size:13px; color:var(--ink-soft);}
-  footer.tips h3{font-family:Georgia,serif; color:var(--pine-deep); font-size:16px; margin:0 0 8px;}
+  footer.tips h3{font-family:"Lora",Georgia,serif; color:var(--pine-deep); font-size:16px; margin:0 0 8px;}
   footer.tips ol{padding-left:20px; margin:0;}
   footer.tips li{margin-bottom:8px;}
 </style>
@@ -137,7 +140,7 @@
 
   <div class="panel">
     <h2>Novidades (galeria de notícias)</h2>
-    <p class="hint">Cada item vira um card com foto, data, título e um texto corrido. O mais novo pode ficar no topo da lista.</p>
+    <p class="hint">Cada item vira um slide com foto, data, título e um texto corrido, navegável por setas quando houver mais de um. O mais novo pode ficar no topo da lista. Só aparecem no site as novidades marcadas como "destacar no site" — se nenhuma estiver marcada, a seção inteira fica oculta.</p>
     <label>Selo da seção</label>
     <input type="text" id="noticias-eyebrow">
     <label>Título da seção</label>
@@ -199,29 +202,29 @@ var STORAGE_KEY = "voxia_editor_draft_v1";
 
 var DEFAULT_CONTENT = {
   "hero": {
-    "eyebrow": "Consultoria de Reputação e Narrativa",
-    "headline": "Cada marca tem uma voz. A Voxia encontra a certa.",
-    "lede": "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já esteve numa sala de crise de verdade antes de escrever a primeira linha.",
+    "eyebrow": "Reputação e Narrativa para Médicos e Executivos",
+    "headline": "Sua reputação tem uma voz. A Voxia encontra a certa.",
+    "lede": "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já administrou crise real antes de escrever a primeira linha.",
     "ctaLabel": "Marcar uma conversa",
     "ctaSecondaryLabel": "Ver o que fazemos"
   },
   "sobre": {
     "eyebrow": "Sobre a Voxia",
-    "titulo": "O que fica depois que a sala esvazia",
+    "titulo": "O que resta quando a atenção passa",
     "paragrafos": [
-      "Toda marca tem uma reputação, cuide dela ou não. A diferença entre as duas está em quem decide o que vai ser dito antes que alguém precise reagir.",
-      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma marca antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
-      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para marcas que ainda não têm essa estrutura montada em casa."
+      "Todo médico e todo executivo tem uma reputação, cuide dela ou não. A diferença está em quem decide o que vai ser dito antes que alguém precise reagir.",
+      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma pessoa antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
     ]
   },
   "servicos": {
     "eyebrow": "O que fazemos",
-    "titulo": "Quatro formas de organizar uma voz que hoje está solta",
+    "titulo": "Quatro formas de organizar a reputação que hoje está solta",
     "itens": [
-      { "titulo": "Diagnóstico de Reputação e Narrativa", "texto": "Um raio-x de como sua marca é percebida agora, onde a mensagem está furada e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
-      { "titulo": "Narrativa contínua", "texto": "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que a marca fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
-      { "titulo": "Manual de marca", "texto": "Tom, vocabulário, paleta e regras de uso documentados, para qualquer pessoa do time escrever e criar peças com a mesma voz, mesmo sem você por perto." },
-      { "titulo": "Prontidão para crise", "texto": "Um plano pronto antes da crise chegar: quem fala, o que se diz nas primeiras horas, e uma rotina de resposta já testada, não inventada no susto." }
+      { "titulo": "Diagnóstico de Reputação e Narrativa", "texto": "Um raio-x de como você é percebido agora, onde a mensagem perde consistência e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
+      { "titulo": "Narrativa contínua", "texto": "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que você fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
+      { "titulo": "Manual de marca", "texto": "Tom, vocabulário e regras de uso documentados, para que quem produza conteúdo por você — assessoria, equipe, agência — escreva com a mesma voz, mesmo sem você revisar cada peça." },
+      { "titulo": "Prontidão para crise", "texto": "Um plano pronto antes da crise chegar, com quem fala, o que se diz nas primeiras horas e uma rotina de resposta já testada, não improvisada sob pressão." }
     ]
   },
   "metodo": {
@@ -239,6 +242,7 @@ var DEFAULT_CONTENT = {
       {
         "data": "Julho de 2026",
         "titulo": "Voxia no ar",
+        "destaque": true,
         "foto": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
         "texto": "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
       }
@@ -254,7 +258,7 @@ var DEFAULT_CONTENT = {
     ]
   },
   "ctaFinal": {
-    "titulo": "Sua marca já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
+    "titulo": "Sua reputação já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
     "texto": "Uma conversa de trinta minutos já mostra por onde começar.",
     "ctaLabel": "Marcar uma conversa"
   },
@@ -387,6 +391,16 @@ function renderNewsList(){
     top.appendChild(label); top.appendChild(del);
     card.appendChild(top);
 
+    var destaqueRow = document.createElement("div"); destaqueRow.className = "news-destaque-row";
+    var destaqueCheck = document.createElement("input"); destaqueCheck.type = "checkbox";
+    destaqueCheck.id = "news-destaque-" + idx;
+    destaqueCheck.checked = item.destaque !== false;
+    var destaqueLabel = document.createElement("label"); destaqueLabel.htmlFor = destaqueCheck.id;
+    destaqueLabel.textContent = "Destacar no site";
+    destaqueCheck.addEventListener("change", function(){ item.destaque = destaqueCheck.checked; saveDraft(); });
+    destaqueRow.appendChild(destaqueCheck); destaqueRow.appendChild(destaqueLabel);
+    card.appendChild(destaqueRow);
+
     var dataInput = document.createElement("input"); dataInput.type = "text"; dataInput.value = item.data;
     dataInput.style.marginTop = "8px"; dataInput.placeholder = "Data (ex. Julho de 2026)";
     dataInput.addEventListener("input", function(){ item.data = dataInput.value; saveDraft(); });
@@ -469,7 +483,7 @@ document.addEventListener("click", function(e){
     saveDraft(); renderAll();
   }
   if(e.target.getAttribute && e.target.getAttribute("data-add-news")){
-    state.noticias.itens.unshift({data:"", titulo:"", foto:PLACEHOLDER_NEWS_IMG, texto:""});
+    state.noticias.itens.unshift({data:"", titulo:"", foto:PLACEHOLDER_NEWS_IMG, texto:"", destaque:true});
     saveDraft(); renderAll();
   }
 });

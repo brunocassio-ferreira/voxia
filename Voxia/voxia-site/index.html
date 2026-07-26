@@ -1,11 +1,26 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Voxia — Consultoria de Reputação e Narrativa</title>
-<meta name="description" content="A Voxia organiza a voz de marcas e lideranças antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C2921'/%3E%3Cpath d='M50 80C28 80 19 59 19 45C19 27 33 16 50 16' stroke='%233C6E52' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 69C34 69 27 55 27 45C27 32 37 24 50 24' stroke='%23A9764F' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 58C41 58 36 49 36 45C36 38 43 32 50 32' stroke='%23F4F5F1' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
+<link rel="canonical" href="https://somosvoxia.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://somosvoxia.com/">
+<meta property="og:site_name" content="Voxia">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Voxia — Consultoria de Reputação e Narrativa">
+<meta property="og:description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
+<meta property="og:image" content="https://somosvoxia.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Voxia — Reputação e Narrativa para Médicos e Executivos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voxia — Consultoria de Reputação e Narrativa">
+<meta name="twitter:description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela.">
+<meta name="twitter:image" content="https://somosvoxia.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C2921'/%3E%3Cpath d='M91.35 65.05 A44 44 0 1 1 65.05 8.65' stroke='%233C6E52' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M80.07 60.94 A32 32 0 1 1 60.94 19.93' stroke='%23A9764F' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M68.79 56.84 A20 20 0 1 1 56.84 31.21' stroke='%23F4F5F1' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   :root{
     --paper:#F4F5F1;
@@ -22,13 +37,13 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-family:"IBM Plex Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
     font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%; display:block;}
   a{color:inherit;}
   .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
-  .serif{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;}
+  .serif{font-family:"Lora",Georgia,"Iowan Old Style","Times New Roman",serif;}
 
   /* header */
   header{
@@ -38,7 +53,7 @@
   .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; gap:20px;}
   .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
   .brand svg{width:30px; height:30px;}
-  .brand span{font-family:Georgia,serif; font-size:20px; color:var(--pine-deep); letter-spacing:.01em;}
+  .brand span{font-family:"Lora",Georgia,serif; font-size:20px; color:var(--pine-deep); letter-spacing:.01em;}
   .navlinks{display:flex; gap:26px; font-size:14px; font-weight:600;}
   .navlinks a{text-decoration:none; color:var(--ink-soft);}
   .navlinks a:hover{color:var(--clay);}
@@ -77,23 +92,38 @@
   .grid-4{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:8px;}
   @media (max-width:680px){.grid-4{grid-template-columns:1fr;}}
   .card{background:#fff; border:1px solid var(--hairline); border-radius:8px; padding:26px 24px;}
-  .card h3{font-family:Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 10px;}
+  .card h3{font-family:"Lora",Georgia,serif; font-size:19px; color:var(--pine-deep); margin:0 0 10px;}
   .card p{font-size:15px; line-height:1.65; color:var(--ink-soft); margin:0;}
 
   .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:8px;}
   @media (max-width:720px){.grid-3{grid-template-columns:1fr;}}
-  .proof h4{font-family:Georgia,serif; font-size:16.5px; color:var(--pine-deep); margin:0 0 8px; padding-top:14px; border-top:2px solid var(--clay);}
+  .proof h4{font-family:"Lora",Georgia,serif; font-size:16.5px; color:var(--pine-deep); margin:0 0 8px; padding-top:14px; border-top:2px solid var(--clay);}
   .proof p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
 
   /* noticias */
-  .news-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:8px;}
-  @media (max-width:720px){.news-grid{grid-template-columns:1fr;}}
-  .news-card{background:#fff; border:1px solid var(--hairline); border-radius:8px; overflow:hidden;}
+  .news-slider-row{display:flex; align-items:center; gap:14px; margin-top:8px;}
+  .news-viewport{overflow:hidden; flex:1; border-radius:8px;}
+  .news-track{display:flex; transition:transform .45s ease;}
+  .news-card{flex:0 0 100%; max-width:100%; background:#fff; border:1px solid var(--hairline); border-radius:8px; overflow:hidden; display:flex; flex-direction:column;}
   .news-card img{width:100%; aspect-ratio:16/10; object-fit:cover; background:var(--pine-deep);}
-  .news-body{padding:20px 22px;}
+  .news-body{padding:24px 26px;}
   .news-date{font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--clay); font-weight:700; margin:0 0 8px;}
-  .news-card h3{font-family:Georgia,serif; font-size:18px; color:var(--pine-deep); margin:0 0 10px;}
+  .news-card h3{font-family:"Lora",Georgia,serif; font-size:18px; color:var(--pine-deep); margin:0 0 10px;}
   .news-card p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
+  @media (min-width:721px){
+    .news-card{flex-direction:row;}
+    .news-card img{width:40%; aspect-ratio:auto; height:auto;}
+    .news-body{flex:1; padding:30px 34px;}
+  }
+  .news-arrow{
+    flex:none; width:40px; height:40px; border-radius:50%; border:1px solid var(--hairline);
+    background:#fff; color:var(--pine-deep); font-size:19px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .news-arrow:hover{background:var(--paper-2); border-color:var(--clay);}
+  .news-dots{display:flex; gap:8px; justify-content:center; margin-top:18px;}
+  .news-dot{width:8px; height:8px; border-radius:50%; border:none; background:var(--hairline); cursor:pointer; padding:0;}
+  .news-dot.active{background:var(--clay);}
 
   /* cta final */
   .cta-final{background:var(--pine-deep); color:var(--paper); text-align:left;}
@@ -103,7 +133,7 @@
   footer{background:var(--pine); color:rgba(244,245,241,.85); padding:52px 0 36px;}
   .foot-grid{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; padding-bottom:28px; border-bottom:1px solid rgba(244,245,241,.15);}
   .foot-brand{display:flex; align-items:center; gap:10px;}
-  .foot-brand span{font-family:Georgia,serif; font-size:19px; color:var(--paper);}
+  .foot-brand span{font-family:"Lora",Georgia,serif; font-size:19px; color:var(--paper);}
   .foot-links{display:flex; gap:22px; flex-wrap:wrap; font-size:14px;}
   .foot-links a{text-decoration:none; display:flex; align-items:center; gap:7px;}
   .foot-links a:hover{color:var(--clay-soft);}
@@ -116,14 +146,14 @@
 <header>
   <nav class="nav wrap">
     <a class="brand" href="#topo">
-      <svg viewBox="0 0 100 100" fill="none"><path d="M50 80C28 80 19 59 19 45C19 27 33 16 50 16" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M50 69C34 69 27 55 27 45C27 32 37 24 50 24" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M50 58C41 58 36 49 36 45C36 38 43 32 50 32" stroke="#1C2321" stroke-width="7" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 100 100" fill="none"><path d="M91.35 65.05 A44 44 0 1 1 65.05 8.65" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M80.07 60.94 A32 32 0 1 1 60.94 19.93" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M68.79 56.84 A20 20 0 1 1 56.84 31.21" stroke="#1C2321" stroke-width="7" stroke-linecap="round"/></svg>
       <span>voxia</span>
     </a>
     <div class="navlinks">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#metodo">Método</a>
-      <a href="#noticias">Novidades</a>
+      <a href="#noticias" id="nav-novidades-link">Novidades</a>
       <a href="#contato">Contato</a>
     </div>
     <a class="btn btn-clay" id="nav-whatsapp" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -170,7 +200,14 @@
   <div class="wrap">
     <p class="sec-eyebrow" id="noticias-eyebrow"></p>
     <h2 class="serif" id="noticias-titulo"></h2>
-    <div class="news-grid" id="noticias-grid"></div>
+    <div class="news-slider-row">
+      <button class="news-arrow" id="news-prev" aria-label="Novidade anterior">&#8249;</button>
+      <div class="news-viewport">
+        <div class="news-track" id="noticias-grid"></div>
+      </div>
+      <button class="news-arrow" id="news-next" aria-label="Próxima novidade">&#8250;</button>
+    </div>
+    <div class="news-dots" id="noticias-dots"></div>
   </div>
 </section>
 
@@ -194,7 +231,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg viewBox="0 0 100 100" fill="none" width="26" height="26"><path d="M50 80C28 80 19 59 19 45C19 27 33 16 50 16" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M50 69C34 69 27 55 27 45C27 32 37 24 50 24" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M50 58C41 58 36 49 36 45C36 38 43 32 50 32" stroke="#F4F5F1" stroke-width="7" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 100 100" fill="none" width="26" height="26"><path d="M91.35 65.05 A44 44 0 1 1 65.05 8.65" stroke="#3C6E52" stroke-width="7" stroke-linecap="round"/><path d="M80.07 60.94 A32 32 0 1 1 60.94 19.93" stroke="#A9764F" stroke-width="7" stroke-linecap="round"/><path d="M68.79 56.84 A20 20 0 1 1 56.84 31.21" stroke="#F4F5F1" stroke-width="7" stroke-linecap="round"/></svg>
         <span>voxia</span>
       </div>
       <div class="foot-links">
@@ -229,29 +266,29 @@
 // e a página passa a ler dele automaticamente, sem precisar mexer neste arquivo.
 window.VOXIA_DEFAULT_CONTENT = {
   hero: {
-    eyebrow: "Consultoria de Reputação e Narrativa",
-    headline: "Cada marca tem uma voz. A Voxia encontra a certa.",
-    lede: "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já esteve numa sala de crise de verdade antes de escrever a primeira linha.",
+    eyebrow: "Reputação e Narrativa para Médicos e Executivos",
+    headline: "Sua reputação tem uma voz. A Voxia encontra a certa.",
+    lede: "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já administrou crise real antes de escrever a primeira linha.",
     ctaLabel: "Marcar uma conversa",
     ctaSecondaryLabel: "Ver o que fazemos"
   },
   sobre: {
     eyebrow: "Sobre a Voxia",
-    titulo: "O que fica depois que a sala esvazia",
+    titulo: "O que resta quando a atenção passa",
     paragrafos: [
-      "Toda marca tem uma reputação, cuide dela ou não. A diferença entre as duas está em quem decide o que vai ser dito antes que alguém precise reagir.",
-      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma marca antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
-      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para marcas que ainda não têm essa estrutura montada em casa."
+      "Todo médico e todo executivo tem uma reputação, cuide dela ou não. A diferença está em quem decide o que vai ser dito antes que alguém precise reagir.",
+      "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma pessoa antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
     ]
   },
   servicos: {
     eyebrow: "O que fazemos",
-    titulo: "Quatro formas de organizar uma voz que hoje está solta",
+    titulo: "Quatro formas de organizar a reputação que hoje está solta",
     itens: [
-      { titulo: "Diagnóstico de Reputação e Narrativa", texto: "Um raio-x de como sua marca é percebida agora, onde a mensagem está furada e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
-      { titulo: "Narrativa contínua", texto: "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que a marca fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
-      { titulo: "Manual de marca", texto: "Tom, vocabulário, paleta e regras de uso documentados, para qualquer pessoa do time escrever e criar peças com a mesma voz, mesmo sem você por perto." },
-      { titulo: "Prontidão para crise", texto: "Um plano pronto antes da crise chegar: quem fala, o que se diz nas primeiras horas, e uma rotina de resposta já testada, não inventada no susto." }
+      { titulo: "Diagnóstico de Reputação e Narrativa", texto: "Um raio-x de como você é percebido agora, onde a mensagem perde consistência e o que precisa mudar primeiro. A porta de entrada para quem quer clareza antes de comprometer um mês inteiro de trabalho." },
+      { titulo: "Narrativa contínua", texto: "Acompanhamento mensal de voz e presença, estratégia, escrita e curadoria de produção, para que você fale do mesmo jeito toda semana, não só quando alguém lembra de postar." },
+      { titulo: "Manual de marca", texto: "Tom, vocabulário e regras de uso documentados, para que quem produza conteúdo por você — assessoria, equipe, agência — escreva com a mesma voz, mesmo sem você revisar cada peça." },
+      { titulo: "Prontidão para crise", texto: "Um plano pronto antes da crise chegar, com quem fala, o que se diz nas primeiras horas e uma rotina de resposta já testada, não improvisada sob pressão." }
     ]
   },
   metodo: {
@@ -269,6 +306,7 @@ window.VOXIA_DEFAULT_CONTENT = {
       {
         data: "Julho de 2026",
         titulo: "Voxia no ar",
+        destaque: true,
         foto: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
         texto: "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
       }
@@ -284,7 +322,7 @@ window.VOXIA_DEFAULT_CONTENT = {
     ]
   },
   ctaFinal: {
-    titulo: "Sua marca já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
+    titulo: "Sua reputação já tem uma voz. A pergunta é se ela está sendo ouvida do jeito certo.",
     texto: "Uma conversa de trinta minutos já mostra por onde começar.",
     ctaLabel: "Marcar uma conversa"
   },
@@ -341,20 +379,67 @@ function render(content){
     metWrap.appendChild(el);
   });
 
-  document.getElementById("noticias-eyebrow").textContent = c.noticias.eyebrow;
-  document.getElementById("noticias-titulo").textContent = c.noticias.titulo;
-  var newsGrid = document.getElementById("noticias-grid");
-  newsGrid.innerHTML = "";
-  c.noticias.itens.forEach(function(item){
-    var card = document.createElement("div"); card.className = "news-card";
-    var img = document.createElement("img"); img.src = item.foto; img.alt = item.titulo;
-    var body = document.createElement("div"); body.className = "news-body";
-    var date = document.createElement("p"); date.className = "news-date"; date.textContent = item.data;
-    var h3 = document.createElement("h3"); h3.textContent = item.titulo;
-    var p = document.createElement("p"); p.textContent = item.texto;
-    body.appendChild(date); body.appendChild(h3); body.appendChild(p);
-    card.appendChild(img); card.appendChild(body); newsGrid.appendChild(card);
-  });
+  var noticiasSection = document.getElementById("noticias");
+  var noticiasNavLink = document.getElementById("nav-novidades-link");
+  var destacadas = (c.noticias.itens || []).filter(function(item){ return item.destaque !== false; });
+
+  if(destacadas.length === 0){
+    noticiasSection.style.display = "none";
+    if(noticiasNavLink) noticiasNavLink.style.display = "none";
+  } else {
+    noticiasSection.style.display = "";
+    if(noticiasNavLink) noticiasNavLink.style.display = "";
+
+    document.getElementById("noticias-eyebrow").textContent = c.noticias.eyebrow;
+    document.getElementById("noticias-titulo").textContent = c.noticias.titulo;
+
+    var newsTrack = document.getElementById("noticias-grid");
+    newsTrack.innerHTML = "";
+    destacadas.forEach(function(item){
+      var card = document.createElement("div"); card.className = "news-card";
+      var img = document.createElement("img"); img.src = item.foto; img.alt = item.titulo;
+      var body = document.createElement("div"); body.className = "news-body";
+      var date = document.createElement("p"); date.className = "news-date"; date.textContent = item.data;
+      var h3 = document.createElement("h3"); h3.textContent = item.titulo;
+      var p = document.createElement("p"); p.textContent = item.texto;
+      body.appendChild(date); body.appendChild(h3); body.appendChild(p);
+      card.appendChild(img); card.appendChild(body); newsTrack.appendChild(card);
+    });
+
+    var prevBtn = document.getElementById("news-prev");
+    var nextBtn = document.getElementById("news-next");
+    var dotsWrap = document.getElementById("noticias-dots");
+    dotsWrap.innerHTML = "";
+    var n = destacadas.length;
+    var idx = 0;
+
+    function updateSlider(){
+      newsTrack.style.transform = "translateX(-" + (idx * 100) + "%)";
+      Array.prototype.forEach.call(dotsWrap.children, function(dot, i){
+        dot.classList.toggle("active", i === idx);
+      });
+    }
+
+    if(n > 1){
+      prevBtn.style.display = "";
+      nextBtn.style.display = "";
+      for(var i = 0; i < n; i++){
+        (function(i){
+          var dot = document.createElement("button");
+          dot.className = "news-dot";
+          dot.setAttribute("aria-label", "Ir para novidade " + (i + 1));
+          dot.addEventListener("click", function(){ idx = i; updateSlider(); });
+          dotsWrap.appendChild(dot);
+        })(i);
+      }
+      prevBtn.onclick = function(){ idx = (idx - 1 + n) % n; updateSlider(); };
+      nextBtn.onclick = function(){ idx = (idx + 1) % n; updateSlider(); };
+    } else {
+      prevBtn.style.display = "none";
+      nextBtn.style.display = "none";
+    }
+    updateSlider();
+  }
 
   document.getElementById("prova-eyebrow").textContent = c.prova.eyebrow;
   document.getElementById("prova-titulo").textContent = c.prova.titulo;
