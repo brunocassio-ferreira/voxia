@@ -143,6 +143,9 @@
   .cta-final{background:var(--pine-deep); color:var(--paper); text-align:left;}
   .cta-final h2{color:var(--paper); max-width:20ch;}
   .cta-final p{color:rgba(244,245,241,.75); font-size:17px; max-width:52ch; margin:0 0 30px;}
+  .cta-final .ctas{display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+  .cta-alt-link{font-size:14px; font-weight:600; color:rgba(244,245,241,.75); text-decoration:underline; text-underline-offset:3px;}
+  .cta-alt-link:hover{color:var(--paper);}
 
   footer{background:var(--pine); color:rgba(244,245,241,.85); padding:52px 0 36px;}
   .foot-grid{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; padding-bottom:28px; border-bottom:1px solid rgba(244,245,241,.15);}
@@ -240,7 +243,10 @@
   <div class="wrap">
     <h2 class="serif" id="ctafinal-titulo"></h2>
     <p id="ctafinal-texto"></p>
-    <a class="btn btn-clay" id="ctafinal-cta" href="#" target="_blank" rel="noopener"></a>
+    <div class="ctas">
+      <a class="btn btn-clay" id="ctafinal-cta" href="#" target="_blank" rel="noopener"></a>
+      <a class="cta-alt-link" id="ctafinal-email">ou prefere por e-mail</a>
+    </div>
   </div>
 </section>
 
@@ -302,7 +308,7 @@ window.VOXIA_DEFAULT_CONTENT = {
     eyebrow: "Reputação e Narrativa para Médicos e Executivos",
     headline: "Sua reputação tem uma voz. A Voxia encontra a certa.",
     lede: "Reputação não se resolve com post solto quando dá vontade. Resolve-se com estratégia, uma voz que se mantém igual em qualquer canal, e alguém que já administrou crise real antes de escrever a primeira linha.",
-    ctaLabel: "Marcar uma conversa",
+    ctaLabel: "Marcar uma conversa de 30 minutos",
     ctaSecondaryLabel: "Ver o que fazemos"
   },
   sobre: {
@@ -350,7 +356,7 @@ window.VOXIA_DEFAULT_CONTENT = {
     titulo: "Repertório que não veio de curso de fim de semana",
     itens: [
       { titulo: "Crise administrada de verdade", texto: "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
-      { titulo: "Reconhecimento nacional", texto: "Prêmios das principais premiações de comunicação corporativa do país, e reconhecimento em gestão de pessoas e engajamento interno." },
+      { titulo: "Reconhecimento nacional", texto: "Cinco prêmios Aberje entre 2016 e 2019, incluindo uma vitória na etapa nacional. Também o Top Ser Humano ABRH-RS 2022, por um projeto de comunicação interna que chegou a mais de três mil pessoas." },
       { titulo: "Estrutura sob medida", texto: "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
     ]
   },
@@ -490,6 +496,7 @@ function render(content){
   var ctaBtn = document.getElementById("ctafinal-cta");
   ctaBtn.textContent = c.ctaFinal.ctaLabel;
   ctaBtn.href = waLink(c.contato.whatsapp, "Oi! Vim pelo site da Voxia e queria marcar uma conversa.");
+  document.getElementById("ctafinal-email").href = "mailto:" + c.contato.email + "?subject=" + encodeURIComponent("Vim pelo site da Voxia") + "&body=" + encodeURIComponent("Oi! Vim pelo site da Voxia e queria marcar uma conversa.");
 
   var navWa = document.getElementById("nav-whatsapp");
   navWa.href = waLink(c.contato.whatsapp, "Oi! Vim pelo site da Voxia e queria marcar uma conversa.");
