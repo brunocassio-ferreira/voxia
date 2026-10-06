@@ -54,7 +54,7 @@
   ],
   "founder": {
     "@type": "Person",
-    "name": "Bruno Cassio Lopes Ferreira"
+    "name": "Bruno Cassio"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -78,6 +78,7 @@
     --pine-deep:#1C2921;
     --clay:#A9764F;
     --clay-soft:#C79A72;
+    --clay-text:#85552F;
     --hairline:#D7D6C7;
   }
   *{box-sizing:border-box;}
@@ -88,6 +89,8 @@
     font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%; display:block;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--clay); outline-offset:3px;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
   a{color:inherit;}
   .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
   .serif{font-family:"Lora",Georgia,"Iowan Old Style","Times New Roman",serif;}
@@ -161,30 +164,22 @@
   .proof h4{font-family:"Lora",Georgia,serif; font-size:16.5px; color:var(--pine-deep); margin:0 0 8px; padding-top:14px; border-top:2px solid var(--clay);}
   .proof p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
 
-  /* noticias */
-  .news-slider-row{display:flex; align-items:center; gap:14px; margin-top:8px;}
-  .news-viewport{overflow:hidden; flex:1; border-radius:8px;}
-  .news-track{display:flex; transition:transform .45s ease;}
-  .news-card{flex:0 0 100%; max-width:100%; background:#fff; border:1px solid var(--hairline); border-radius:8px; overflow:hidden; display:flex; flex-direction:column;}
-  .news-card img{width:100%; aspect-ratio:16/10; object-fit:cover; background:var(--pine-deep);}
-  .news-body{padding:24px 26px;}
-  .news-date{font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--clay); font-weight:700; margin:0 0 8px;}
-  .news-card h3{font-family:"Lora",Georgia,serif; font-size:18px; color:var(--pine-deep); margin:0 0 10px;}
-  .news-card p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0;}
-  @media (min-width:721px){
-    .news-card{flex-direction:row;}
-    .news-card img{width:40%; aspect-ratio:auto; height:auto;}
-    .news-body{flex:1; padding:30px 34px;}
+  /* fundador */
+  .founder{display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:start;}
+  .founder-photo{position:relative; width:280px; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:var(--pine-deep);}
+  .founder-photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;}
+  .founder-photo.no-photo img{display:none;}
+  .founder-initials{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:"Lora",Georgia,serif; font-size:72px; font-weight:600; color:var(--clay-soft);}
+  .founder-name{font-size:22px; color:var(--pine-deep); margin:0 0 4px;}
+  .founder-role{font-size:14px; color:var(--clay-text); font-weight:600; margin:0 0 20px;}
+  .founder-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:30px;}
+  .founder-stat strong{display:block; font-family:"Lora",Georgia,serif; font-size:34px; line-height:1.1; color:var(--pine-deep); padding-top:14px; border-top:2px solid var(--clay); margin-bottom:8px;}
+  .founder-stat span{font-size:14px; line-height:1.55; color:var(--ink-soft);}
+  @media (max-width:820px){
+    .founder{grid-template-columns:1fr; gap:28px;}
+    
+    .founder-stats{grid-template-columns:1fr;}
   }
-  .news-arrow{
-    flex:none; width:40px; height:40px; border-radius:50%; border:1px solid var(--hairline);
-    background:#fff; color:var(--pine-deep); font-size:19px; line-height:1; cursor:pointer;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .news-arrow:hover{background:var(--paper-2); border-color:var(--clay);}
-  .news-dots{display:flex; gap:8px; justify-content:center; margin-top:18px;}
-  .news-dot{width:8px; height:8px; border-radius:50%; border:none; background:var(--hairline); cursor:pointer; padding:0;}
-  .news-dot.active{background:var(--clay);}
 
   /* cta final */
   .cta-final{background:var(--pine-deep); color:var(--paper); text-align:left;}
@@ -215,9 +210,9 @@
     </a>
     <div class="navlinks" id="navlinks-mobile">
       <a href="#sobre">Sobre</a>
+      <a href="#fundador">Fundador</a>
       <a href="#servicos">Serviços</a>
       <a href="#metodo">Método</a>
-      <a href="#noticias" id="nav-novidades-link">Novidades</a>
       <a href="#contato">Contato</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navlinks-mobile">
@@ -227,6 +222,7 @@
   </nav>
 </header>
 
+<main>
 <section class="hero" id="topo">
   <div class="wrap">
     <p class="eyebrow" id="hero-eyebrow"></p>
@@ -247,7 +243,26 @@
   </div>
 </section>
 
-<section class="alt" id="servicos">
+<section class="alt" id="fundador">
+  <div class="wrap">
+    <div class="founder">
+      <div class="founder-photo" id="fundador-foto-wrap">
+        <img id="fundador-foto" src="bruno.png" alt="Bruno Cassio, fundador da Voxia" width="320" height="400">
+        <span class="founder-initials" aria-hidden="true">BC</span>
+      </div>
+      <div class="founder-body">
+        <p class="sec-eyebrow" id="fundador-eyebrow"></p>
+        <h2 class="serif" id="fundador-titulo"></h2>
+        <p class="founder-name serif" id="fundador-nome"></p>
+        <p class="founder-role" id="fundador-cargo"></p>
+        <p class="lead-p" id="fundador-texto"></p>
+        <div class="founder-stats" id="fundador-numeros"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
   <div class="wrap">
     <p class="sec-eyebrow" id="servicos-eyebrow"></p>
     <h2 class="serif" id="servicos-titulo"></h2>
@@ -255,26 +270,11 @@
   </div>
 </section>
 
-<section id="metodo">
+<section class="alt" id="metodo">
   <div class="wrap">
     <p class="sec-eyebrow" id="metodo-eyebrow"></p>
     <h2 class="serif" id="metodo-titulo"></h2>
     <div id="metodo-paragrafos"></div>
-  </div>
-</section>
-
-<section class="alt" id="noticias">
-  <div class="wrap">
-    <p class="sec-eyebrow" id="noticias-eyebrow"></p>
-    <h2 class="serif" id="noticias-titulo"></h2>
-    <div class="news-slider-row">
-      <button class="news-arrow" id="news-prev" aria-label="Novidade anterior">&#8249;</button>
-      <div class="news-viewport">
-        <div class="news-track" id="noticias-grid"></div>
-      </div>
-      <button class="news-arrow" id="news-next" aria-label="Próxima novidade">&#8250;</button>
-    </div>
-    <div class="news-dots" id="noticias-dots"></div>
   </div>
 </section>
 
@@ -285,6 +285,8 @@
     <div class="grid-3" id="prova-grid"></div>
   </div>
 </section>
+
+</main>
 
 <section class="cta-final" id="contato">
   <div class="wrap">
@@ -376,8 +378,29 @@ window.VOXIA_DEFAULT_CONTENT = {
     paragrafos: [
       "Todo médico e todo executivo tem uma reputação, cuide dela ou não. A diferença está em quem decide o que vai ser dito antes que alguém precise reagir.",
       "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma pessoa antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
-      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e participação em prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
     ]
+  },
+  fundador: {
+      "eyebrow": "Quem assina",
+      "titulo": "Quem está por trás da Voxia",
+      "nome": "Bruno Cassio",
+      "cargo": "Fundador da Voxia · Relações-Públicas, Conrerp 4ª Região RS/SC",
+      "texto": "Mais de 15 anos em gestão de operações e comunicação corporativa em organizações de grande porte. Duas frentes que raramente aparecem na mesma trajetória: liderança operacional, com times de mais de 100 pessoas, e comunicação institucional em cenários de crise real e alta exposição.",
+      "numeros": [
+          {
+              "valor": "5",
+              "texto": "participações em prêmios Aberje (2016, 2017 e 2019), a maior premiação de comunicação do Brasil"
+          },
+          {
+              "valor": "+100",
+              "texto": "pessoas lideradas na operação de Educação e Saúde do SESI/RS"
+          },
+          {
+              "valor": "1",
+              "texto": "Top Ser Humano ABRH-RS 2022, pelo projeto Papo SESI"
+          }
+      ]
   },
   servicos: {
     eyebrow: "O que fazemos",
@@ -397,25 +420,12 @@ window.VOXIA_DEFAULT_CONTENT = {
       "Quando o projeto pede vídeo ou peças gráficas, entra uma rede pequena de parceiros freelance, escolhidos a dedo e acionados projeto a projeto. Isso mantém a operação enxuta e o preço abaixo de uma agência com estrutura fixa, sem abrir mão de quem entende de reputação de verdade."
     ]
   },
-  noticias: {
-    eyebrow: "Novidades",
-    titulo: "Atualizações da Voxia",
-    itens: [
-      {
-        data: "Julho de 2026",
-        titulo: "Voxia no ar",
-        destaque: true,
-        foto: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
-        texto: "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
-      }
-    ]
-  },
   prova: {
     eyebrow: "Por que a Voxia",
     titulo: "Repertório que não veio de curso de fim de semana",
     itens: [
       { titulo: "Crise administrada de verdade", texto: "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
-      { titulo: "Reconhecimento nacional", texto: "Cinco prêmios Aberje entre 2016 e 2019, incluindo uma vitória na etapa nacional. Também o Top Ser Humano ABRH-RS 2022, por um projeto de comunicação interna que chegou a mais de três mil pessoas." },
+      { titulo: "Reconhecimento nacional", texto: "Participação em cinco prêmios Aberje entre 2016 e 2019, incluindo uma vitória na etapa nacional. Também o Top Ser Humano ABRH-RS 2022, por um projeto de comunicação interna que chegou a mais de três mil pessoas." },
       { titulo: "Estrutura sob medida", texto: "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
     ]
   },
@@ -477,67 +487,25 @@ function render(content){
     metWrap.appendChild(el);
   });
 
-  var noticiasSection = document.getElementById("noticias");
-  var noticiasNavLink = document.getElementById("nav-novidades-link");
-  var destacadas = (c.noticias.itens || []).filter(function(item){ return item.destaque !== false; });
-
-  if(destacadas.length === 0){
-    noticiasSection.style.display = "none";
-    if(noticiasNavLink) noticiasNavLink.style.display = "none";
-  } else {
-    noticiasSection.style.display = "";
-    if(noticiasNavLink) noticiasNavLink.style.display = "";
-
-    document.getElementById("noticias-eyebrow").textContent = c.noticias.eyebrow;
-    document.getElementById("noticias-titulo").textContent = c.noticias.titulo;
-
-    var newsTrack = document.getElementById("noticias-grid");
-    newsTrack.innerHTML = "";
-    destacadas.forEach(function(item){
-      var card = document.createElement("div"); card.className = "news-card";
-      var img = document.createElement("img"); img.src = item.foto; img.alt = item.titulo;
-      var body = document.createElement("div"); body.className = "news-body";
-      var date = document.createElement("p"); date.className = "news-date"; date.textContent = item.data;
-      var h3 = document.createElement("h3"); h3.textContent = item.titulo;
-      var p = document.createElement("p"); p.textContent = item.texto;
-      body.appendChild(date); body.appendChild(h3); body.appendChild(p);
-      card.appendChild(img); card.appendChild(body); newsTrack.appendChild(card);
-    });
-
-    var prevBtn = document.getElementById("news-prev");
-    var nextBtn = document.getElementById("news-next");
-    var dotsWrap = document.getElementById("noticias-dots");
-    dotsWrap.innerHTML = "";
-    var n = destacadas.length;
-    var idx = 0;
-
-    function updateSlider(){
-      newsTrack.style.transform = "translateX(-" + (idx * 100) + "%)";
-      Array.prototype.forEach.call(dotsWrap.children, function(dot, i){
-        dot.classList.toggle("active", i === idx);
-      });
-    }
-
-    if(n > 1){
-      prevBtn.style.display = "";
-      nextBtn.style.display = "";
-      for(var i = 0; i < n; i++){
-        (function(i){
-          var dot = document.createElement("button");
-          dot.className = "news-dot";
-          dot.setAttribute("aria-label", "Ir para novidade " + (i + 1));
-          dot.addEventListener("click", function(){ idx = i; updateSlider(); });
-          dotsWrap.appendChild(dot);
-        })(i);
-      }
-      prevBtn.onclick = function(){ idx = (idx - 1 + n) % n; updateSlider(); };
-      nextBtn.onclick = function(){ idx = (idx + 1) % n; updateSlider(); };
-    } else {
-      prevBtn.style.display = "none";
-      nextBtn.style.display = "none";
-    }
-    updateSlider();
-  }
+  var f = c.fundador || window.VOXIA_DEFAULT_CONTENT.fundador;
+  document.getElementById("fundador-eyebrow").textContent = f.eyebrow;
+  document.getElementById("fundador-titulo").textContent = f.titulo;
+  document.getElementById("fundador-nome").textContent = f.nome;
+  document.getElementById("fundador-cargo").textContent = f.cargo;
+  document.getElementById("fundador-texto").textContent = f.texto;
+  var statsWrap = document.getElementById("fundador-numeros");
+  statsWrap.innerHTML = "";
+  f.numeros.forEach(function(n){
+    var el = document.createElement("div"); el.className = "founder-stat";
+    var strong = document.createElement("strong"); strong.textContent = n.valor;
+    var span = document.createElement("span"); span.textContent = n.texto;
+    el.appendChild(strong); el.appendChild(span); statsWrap.appendChild(el);
+  });
+  var fotoImg = document.getElementById("fundador-foto");
+  var fotoWrap = document.getElementById("fundador-foto-wrap");
+  function semFoto(){ fotoWrap.classList.add("no-photo"); }
+  fotoImg.addEventListener("error", semFoto);
+  if(fotoImg.complete && fotoImg.naturalWidth === 0) semFoto();
 
   document.getElementById("prova-eyebrow").textContent = c.prova.eyebrow;
   document.getElementById("prova-titulo").textContent = c.prova.titulo;

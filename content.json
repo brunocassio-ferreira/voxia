@@ -12,17 +12,50 @@
     "paragrafos": [
       "Todo médico e todo executivo tem uma reputação, cuide dela ou não. A diferença está em quem decide o que vai ser dito antes que alguém precise reagir.",
       "A Voxia nasceu para ocupar esse lugar, o de quem organiza a voz de uma pessoa antes da crise, não durante ela. Diagnóstico primeiro, direção de narrativa depois, produção por último. Essa ordem evita o improviso.",
-      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
+      "Por trás disso está mais de uma década de comunicação institucional em organizações de grande porte, gestão de crise real e participação em prêmios nacionais de comunicação corporativa. Não é um discurso novo, aprendido para vender consultoria. É rotina que já foi testada sob pressão, agora disponível para médicos e executivos que ainda não têm essa estrutura montada em casa."
+    ]
+  },
+  "fundador": {
+    "eyebrow": "Quem assina",
+    "titulo": "Quem está por trás da Voxia",
+    "nome": "Bruno Cassio",
+    "cargo": "Fundador da Voxia · Relações-Públicas, Conrerp 4ª Região RS/SC",
+    "texto": "Mais de 15 anos em gestão de operações e comunicação corporativa em organizações de grande porte. Duas frentes que raramente aparecem na mesma trajetória: liderança operacional, com times de mais de 100 pessoas, e comunicação institucional em cenários de crise real e alta exposição.",
+    "numeros": [
+      {
+        "valor": "5",
+        "texto": "participações em prêmios Aberje (2016, 2017 e 2019), a maior premiação de comunicação do Brasil"
+      },
+      {
+        "valor": "+100",
+        "texto": "pessoas lideradas na operação de Educação e Saúde do SESI/RS"
+      },
+      {
+        "valor": "1",
+        "texto": "Top Ser Humano ABRH-RS 2022, pelo projeto Papo SESI"
+      }
     ]
   },
   "servicos": {
     "eyebrow": "O que fazemos",
     "titulo": "Comece pelo diagnóstico. Depois monte o que você precisa.",
     "itens": [
-      { "titulo": "Diagnóstico", "texto": "Um raio-x de como sua reputação soa hoje, onde a mensagem perde consistência e o que muda primeiro. É a porta de entrada e vale por si só. Você sai com clareza mesmo que não contrate mais nada, e pode somar os outros serviços quando fizer sentido." },
-      { "titulo": "Narrativa contínua", "texto": "Eu assumo seus canais digitais, estratégia, escrita e publicação, todo mês, com a mão de quem entende de reputação. Não é entregar texto para sua equipe postar. Eu produzo e publico, para que você fale do mesmo jeito toda semana sem depender de lembrar de postar." },
-      { "titulo": "Manual de marca", "texto": "Tom, vocabulário e regras documentados, para que qualquer pessoa que escreva por você — assessoria, equipe, agência — mantenha a mesma voz sem depender da sua revisão. Funciona sozinho ou somado a qualquer um dos outros serviços." },
-      { "titulo": "Prontidão para crise", "texto": "O plano pronto antes de a crise chegar, com quem fala, o que se diz nas primeiras horas e uma rotina de resposta já testada. Feito por quem administrou crise real dentro de organização grande, não por estudo de caso alheio." }
+      {
+        "titulo": "Diagnóstico",
+        "texto": "Um raio-x de como sua reputação soa hoje, onde a mensagem perde consistência e o que muda primeiro. É a porta de entrada e vale por si só. Você sai com clareza mesmo que não contrate mais nada, e pode somar os outros serviços quando fizer sentido."
+      },
+      {
+        "titulo": "Narrativa contínua",
+        "texto": "Eu assumo seus canais digitais, estratégia, escrita e publicação, todo mês, com a mão de quem entende de reputação. Não é entregar texto para sua equipe postar. Eu produzo e publico, para que você fale do mesmo jeito toda semana sem depender de lembrar de postar."
+      },
+      {
+        "titulo": "Manual de marca",
+        "texto": "Tom, vocabulário e regras documentados, para que qualquer pessoa que escreva por você — assessoria, equipe, agência — mantenha a mesma voz sem depender da sua revisão. Funciona sozinho ou somado a qualquer um dos outros serviços."
+      },
+      {
+        "titulo": "Prontidão para crise",
+        "texto": "O plano pronto antes de a crise chegar, com quem fala, o que se diz nas primeiras horas e uma rotina de resposta já testada. Feito por quem administrou crise real dentro de organização grande, não por estudo de caso alheio."
+      }
     ]
   },
   "metodo": {
@@ -33,26 +66,22 @@
       "Quando o projeto pede vídeo ou peças gráficas, entra uma rede pequena de parceiros freelance, escolhidos a dedo e acionados projeto a projeto. Isso mantém a operação enxuta e o preço abaixo de uma agência com estrutura fixa, sem abrir mão de quem entende de reputação de verdade."
     ]
   },
-  "noticias": {
-    "eyebrow": "Novidades",
-    "titulo": "Atualizações da Voxia",
-    "itens": [
-      {
-        "data": "Julho de 2026",
-        "titulo": "Voxia no ar",
-        "destaque": true,
-        "foto": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231C2921'/%3E%3Cpath d='M200 195C158 195 140 156 140 130C140 96 166 76 200 76' stroke='%233C6E52' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 173C170 173 157 148 157 130C157 106 176 91 200 91' stroke='%23A9764F' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M200 152C183 152 174 137 174 130C174 117 187 106 200 106' stroke='%23F4F5F1' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
-        "texto": "O site da Voxia está no ar. Esta seção vai reunir bastidores, aprendizados e novidades sobre reputação e narrativa à medida que forem acontecendo."
-      }
-    ]
-  },
   "prova": {
     "eyebrow": "Por que a Voxia",
     "titulo": "Repertório que não veio de curso de fim de semana",
     "itens": [
-      { "titulo": "Crise administrada de verdade", "texto": "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio." },
-      { "titulo": "Reconhecimento nacional", "texto": "Cinco prêmios Aberje entre 2016 e 2019, incluindo uma vitória na etapa nacional. Também o Top Ser Humano ABRH-RS 2022, por um projeto de comunicação interna que chegou a mais de três mil pessoas." },
-      { "titulo": "Estrutura sob medida", "texto": "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa." }
+      {
+        "titulo": "Crise administrada de verdade",
+        "texto": "Coordenação de resposta institucional sob pressão real, prazo curto e público grande. A experiência vem de dentro de organizações grandes, não de estudo de caso alheio."
+      },
+      {
+        "titulo": "Reconhecimento nacional",
+        "texto": "Participação em cinco prêmios Aberje entre 2016 e 2019, incluindo uma vitória na etapa nacional. Também o Top Ser Humano ABRH-RS 2022, por um projeto de comunicação interna que chegou a mais de três mil pessoas."
+      },
+      {
+        "titulo": "Estrutura sob medida",
+        "texto": "Sem contrato engessado, sem equipe fixa cara. Você paga por estratégia e direção, não por estrutura ociosa."
+      }
     ]
   },
   "ctaFinal": {
