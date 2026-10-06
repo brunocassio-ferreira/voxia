@@ -12,21 +12,21 @@
 </script>
 <meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voxia — Consultoria de Reputação para Médicos e Executivos</title>
+<title>Voxia | Consultoria de Reputação para Médicos e Executivos</title>
 <meta name="description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
 <link rel="canonical" href="https://somosvoxia.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://somosvoxia.com/">
 <meta property="og:site_name" content="Voxia">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Voxia — Consultoria de Reputação para Médicos e Executivos">
+<meta property="og:title" content="Voxia | Consultoria de Reputação para Médicos e Executivos">
 <meta property="og:description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela. Diagnóstico, narrativa contínua, manual de marca e prontidão para crise.">
 <meta property="og:image" content="https://somosvoxia.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Voxia — Reputação e Narrativa para Médicos e Executivos">
+<meta property="og:image:alt" content="Voxia | Reputação e Narrativa para Médicos e Executivos">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voxia — Consultoria de Reputação para Médicos e Executivos">
+<meta name="twitter:title" content="Voxia | Consultoria de Reputação para Médicos e Executivos">
 <meta name="twitter:description" content="A Voxia organiza a voz de médicos e executivos antes da crise, não durante ela.">
 <meta name="twitter:image" content="https://somosvoxia.com/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C2921'/%3E%3Cpath d='M91.35 65.05 A44 44 0 1 1 65.05 8.65' stroke='%233C6E52' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M80.07 60.94 A32 32 0 1 1 60.94 19.93' stroke='%23A9764F' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M68.79 56.84 A20 20 0 1 1 56.84 31.21' stroke='%23F4F5F1' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -122,6 +122,18 @@
     .navlinks.open{max-height:320px;}
     .nav-toggle{display:inline-flex;}
   }
+  @media (min-width:721px){
+    .navlinks a{padding:10px 0;}
+  }
+  @media (max-width:720px){
+    .nav-toggle{width:44px; height:44px; flex:none;}
+  }
+  @media (max-width:400px){
+    .nav{padding:12px 16px; gap:10px;}
+    .brand{flex:none;}
+    .brand span{font-size:18px;}
+    .nav .btn{padding:10px 11px; font-size:12px; white-space:nowrap;}
+  }
   .btn{
     display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700;
     padding:11px 20px; border-radius:5px; text-decoration:none; letter-spacing:.01em;
@@ -148,7 +160,7 @@
   /* sections */
   section{padding:88px 0;}
   section.alt{background:var(--paper-2);}
-  .sec-eyebrow{font-size:11.5px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--clay); margin:0 0 16px;}
+  .sec-eyebrow{font-size:12px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--clay-text); margin:0 0 16px;}
   h2{font-size:clamp(26px,3.4vw,34px); line-height:1.25; color:var(--pine-deep); margin:0 0 26px; text-wrap:balance; max-width:22ch;}
   .lead-p{font-size:17px; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 18px;}
   .lead-p:last-child{margin-bottom:0;}
@@ -186,7 +198,7 @@
   .cta-final h2{color:var(--paper); max-width:20ch;}
   .cta-final p{color:rgba(244,245,241,.75); font-size:17px; max-width:52ch; margin:0 0 30px;}
   .cta-final .ctas{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
-  .cta-alt-link{display:block; margin-top:18px; font-size:14px; font-weight:600; color:rgba(244,245,241,.75); text-decoration:underline; text-underline-offset:3px;}
+  .cta-alt-link{display:block; margin-top:8px; padding:10px 0; font-size:14px; font-weight:600; color:rgba(244,245,241,.75); text-decoration:underline; text-underline-offset:3px;}
   .cta-alt-link:hover{color:var(--paper);}
 
   footer{background:var(--pine); color:rgba(244,245,241,.85); padding:52px 0 36px;}
@@ -194,10 +206,14 @@
   .foot-brand{display:flex; align-items:center; gap:10px;}
   .foot-brand span{font-family:"Lora",Georgia,serif; font-size:19px; color:var(--paper);}
   .foot-links{display:flex; gap:22px; flex-wrap:wrap; font-size:14px;}
-  .foot-links a{text-decoration:none; display:flex; align-items:center; gap:7px;}
+  .foot-links a{text-decoration:none; display:flex; align-items:center; gap:7px; min-height:44px;}
   .foot-links a:hover{color:var(--clay-soft);}
   .foot-links svg{width:16px; height:16px;}
   .foot-bottom{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:22px; font-size:12.5px; color:rgba(244,245,241,.5);}
+  @media (max-width:720px){
+    section{padding:64px 0;}
+    .hero{padding:72px 0 76px;}
+  }
 </style>
 </head>
 <body>
@@ -361,7 +377,7 @@
   });
 })();
 
-// Conteúdo padrão embutido — usado caso content.json ainda não exista ou não carregue.
+// Conteúdo padrão embutido, usado caso content.json ainda não exista ou não carregue.
 // Depois de editar pelo editor.html, suba o content.json exportado para a hospedagem
 // e a página passa a ler dele automaticamente, sem precisar mexer neste arquivo.
 window.VOXIA_DEFAULT_CONTENT = {
@@ -408,7 +424,7 @@ window.VOXIA_DEFAULT_CONTENT = {
     itens: [
       { titulo: "Diagnóstico", texto: "Um raio-x de como sua reputação soa hoje, onde a mensagem perde consistência e o que muda primeiro. É a porta de entrada e vale por si só. Você sai com clareza mesmo que não contrate mais nada, e pode somar os outros serviços quando fizer sentido." },
       { titulo: "Narrativa contínua", texto: "Eu assumo seus canais digitais, estratégia, escrita e publicação, todo mês, com a mão de quem entende de reputação. Não é entregar texto para sua equipe postar. Eu produzo e publico, para que você fale do mesmo jeito toda semana sem depender de lembrar de postar." },
-      { titulo: "Manual de marca", texto: "Tom, vocabulário e regras documentados, para que qualquer pessoa que escreva por você — assessoria, equipe, agência — mantenha a mesma voz sem depender da sua revisão. Funciona sozinho ou somado a qualquer um dos outros serviços." },
+      { titulo: "Manual de marca", texto: "Tom, vocabulário e regras documentados, para que qualquer pessoa que escreva por você (assessoria, equipe, agência) mantenha a mesma voz sem depender da sua revisão. Funciona sozinho ou somado a qualquer um dos outros serviços." },
       { titulo: "Prontidão para crise", texto: "O plano pronto antes de a crise chegar, com quem fala, o que se diz nas primeiras horas e uma rotina de resposta já testada. Feito por quem administrou crise real dentro de organização grande, não por estudo de caso alheio." }
     ]
   },
@@ -440,7 +456,7 @@ window.VOXIA_DEFAULT_CONTENT = {
     instagram: "somos.voxia",
     linkedin: "https://www.linkedin.com/company/somosvoxia",
     email: "contato@somosvoxia.com",
-    cidade: "Porto Alegre, RS — atendimento para todo o Brasil"
+    cidade: "Porto Alegre, RS. Atendimento para todo o Brasil"
   }
 };
 
