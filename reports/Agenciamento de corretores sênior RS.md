@@ -1,5 +1,7 @@
 # Conquiste sêniores gaúchos com sistema, não com split
 
+> Nota de 2026-10-18: este relatório trata de recrutar corretores sênior, que não é o foco da frente de imóveis. A pesquisa vigente, sobre captar vendedores e compradores, está em `Corretor Imoveis/Prospeccao/Acoes_Captacao_Vendedores_e_Compradores.md`.
+
 O agenciamento de corretores sênior no RS funciona melhor como rotina semanal de relacionamento, com lista-alvo curta, conversa de necessidades em mais de um encontro e uma proposta que vá além do percentual de comissão. A literatura de recrutamento imobiliário que as notas conseguiram alcançar, quase toda internacional, trata o recrutamento como operação central do negócio e avisa que o split sozinho é argumento fraco ([Rework](https://resources.rework.com/pt/libraries/real-estate-growth/agent-recruitment-strategy)). O contexto gaúcho favorece a abordagem agora. Os lançamentos em Porto Alegre quase dobraram no início de 2026, a Selic caiu para 13,75% em setembro e o Litoral Norte movimentou cerca de R$ 3,74 bilhões no primeiro semestre. Esses movimentos criam demanda por equipes de vendas e mexem no custo de oportunidade de quem pensa em trocar de casa. A evidência por trás disso é irregular. Os dados de mercado têm fonte, mas as notas não trouxeram nenhum split oficial de rede no RS, nenhum número de corretores ativos do CRECI-RS, nenhuma agenda confirmada de eventos de corretores para 2026/2027 e nenhum script em português para sênior. O plano abaixo separa o que tem fonte, o que é boa prática importada ou inferência, e o que você precisa levantar antes de gastar dinheiro com campanha. Toda a parte jurídica deve passar por advogado antes de virar contrato ou rotina.
 
 ## Como ler a qualidade da evidência
@@ -132,83 +134,88 @@ Total de corretores ativos no RS e perfil por região; data de referência do da
 ## Fontes
 
 Mercado, números e praças
-- Cofeci, e-book 60 anos: https://intranet.cofeci.gov.br/arquivos/ebook/livro-60-anos.pdf
-- CBIC, número de corretores: https://cbic.org.br/aquecimento-do-mercado-imobiliario-aumenta-numero-de-corretores/
-- Portas, fiscalização e corretagem ilegal: https://portas.com.br/noticias/fiscalizacao-aponta-23-250-casos-de-corretagem-ilegal-em-2025/
-- Cofeci, Agenda Legislativa 2025: https://intranet.cofeci.gov.br/agenda-legislativa/2025/AgendaLegislativa2025.pdf
-- Jornal do Comércio, Litoral Norte 2024: https://www.jornaldocomercio.com/cadernos/empresas-e-negocios/2024/09/1170050-expansao-imobiliaria-impulsiona-desenvolvimento-do-litoral-norte.html
-- CBIC/Sinduscon-RS, Litoral Norte 1S2026: https://cbic.org.br/sinduscon-rs-acompanha-evolucao-do-mercado-imobiliario-no-litoral-norte/
-- Portas, Torres: https://portas.com.br/noticias/cidade-do-litoral-gaucho-tem-mais-de-70-predios-em-construcao/
-- Portas/Sinduscon-RS, lançamentos em Porto Alegre 2025: https://portas.com.br/noticias/moinhos-de-vento-menino-deus-e-centro-tem-mais-lancamentos-em-porto-alegre/
-- Portas, lançamentos em Porto Alegre 2026: https://portas.com.br/dados-inteligencia/preco-por-regiao/lancamentos-de-imoveis-em-porto-alegre-quase-dobram-no-inicio-de-2026/
-- Jornal do Comércio, Caxias do Sul: https://www.jornaldocomercio.com/jornal-cidades/2026/08/1259922-compra-e-venda-de-imoveis-revela-setor-aquecido-em-caxias-do-sul.html
-- Jornal do Comércio, Gramado e Canela: https://www.jornaldocomercio.com/jornal-cidades/2025/08/1212890-vendas-de-imoveis-novos-crescem-328-em-gramado-e-canela-no-1-semestre-de-2025.html
-- Jornal do Comércio, Sinduscon-RS 2026: https://www.jornaldocomercio.com/especiais/dia-da-industria/2026/05/1248954-sinduscon-rs-afirma-que-2026-e-uma-janela-de-oportunidades-para-a-construcao-civil.html
-- Jornal do Comércio, Secovi-RS 2026: https://www.jornaldocomercio.com/economia/2026/02/1238278-mercado-imobiliario-preve-2026-aquecido-pelas-eleicoes-no-segundo-semestre.html
-- Jornal do Comércio, praças sem placas: https://www.jornaldocomercio.com/jornal-cidades/2026/05/1249499-xangri-la-e-capao-da-canoa-as-cidades-sem-placas-de-vende-se.html
-- Atlas Público, Selic: https://atlaspublico.com.br/bcb/noticias/copom-reduz-selic-para-13-75pct-ao-ano-em-decisao-unanime-87748
-- Portas, pesquisa Offerwise: https://portas.com.br/noticias/consumidores-aprovam-imobiliarias-mas-negociam-imoveis-sozinhos/
-- Paraíba Business, pesquisa Cofeci-CRECI: https://paraibabusiness.com.br/mercado-imobiliario-em-transformacao-o-que-revela-pesquisa-do-cofeci-creci-sobre-perfil-dos-corretores-de-imoveis/
+
+- Cofeci, e-book 60 anos: <https://intranet.cofeci.gov.br/arquivos/ebook/livro-60-anos.pdf>
+- CBIC, número de corretores: <https://cbic.org.br/aquecimento-do-mercado-imobiliario-aumenta-numero-de-corretores/>
+- Portas, fiscalização e corretagem ilegal: <https://portas.com.br/noticias/fiscalizacao-aponta-23-250-casos-de-corretagem-ilegal-em-2025/>
+- Cofeci, Agenda Legislativa 2025: <https://intranet.cofeci.gov.br/agenda-legislativa/2025/AgendaLegislativa2025.pdf>
+- Jornal do Comércio, Litoral Norte 2024: <https://www.jornaldocomercio.com/cadernos/empresas-e-negocios/2024/09/1170050-expansao-imobiliaria-impulsiona-desenvolvimento-do-litoral-norte.html>
+- CBIC/Sinduscon-RS, Litoral Norte 1S2026: <https://cbic.org.br/sinduscon-rs-acompanha-evolucao-do-mercado-imobiliario-no-litoral-norte/>
+- Portas, Torres: <https://portas.com.br/noticias/cidade-do-litoral-gaucho-tem-mais-de-70-predios-em-construcao/>
+- Portas/Sinduscon-RS, lançamentos em Porto Alegre 2025: <https://portas.com.br/noticias/moinhos-de-vento-menino-deus-e-centro-tem-mais-lancamentos-em-porto-alegre/>
+- Portas, lançamentos em Porto Alegre 2026: <https://portas.com.br/dados-inteligencia/preco-por-regiao/lancamentos-de-imoveis-em-porto-alegre-quase-dobram-no-inicio-de-2026/>
+- Jornal do Comércio, Caxias do Sul: <https://www.jornaldocomercio.com/jornal-cidades/2026/08/1259922-compra-e-venda-de-imoveis-revela-setor-aquecido-em-caxias-do-sul.html>
+- Jornal do Comércio, Gramado e Canela: <https://www.jornaldocomercio.com/jornal-cidades/2025/08/1212890-vendas-de-imoveis-novos-crescem-328-em-gramado-e-canela-no-1-semestre-de-2025.html>
+- Jornal do Comércio, Sinduscon-RS 2026: <https://www.jornaldocomercio.com/especiais/dia-da-industria/2026/05/1248954-sinduscon-rs-afirma-que-2026-e-uma-janela-de-oportunidades-para-a-construcao-civil.html>
+- Jornal do Comércio, Secovi-RS 2026: <https://www.jornaldocomercio.com/economia/2026/02/1238278-mercado-imobiliario-preve-2026-aquecido-pelas-eleicoes-no-segundo-semestre.html>
+- Jornal do Comércio, praças sem placas: <https://www.jornaldocomercio.com/jornal-cidades/2026/05/1249499-xangri-la-e-capao-da-canoa-as-cidades-sem-placas-de-vende-se.html>
+- Atlas Público, Selic: <https://atlaspublico.com.br/bcb/noticias/copom-reduz-selic-para-13-75pct-ao-ano-em-decisao-unanime-87748>
+- Portas, pesquisa Offerwise: <https://portas.com.br/noticias/consumidores-aprovam-imobiliarias-mas-negociam-imoveis-sozinhos/>
+- Paraíba Business, pesquisa Cofeci-CRECI: <https://paraibabusiness.com.br/mercado-imobiliario-em-transformacao-o-que-revela-pesquisa-do-cofeci-creci-sobre-perfil-dos-corretores-de-imoveis/>
 
 Redes, remuneração e proposta
-- Jornal do Comércio, RE/MAX RS: https://www.jornaldocomercio.com/colunas/empresarios-e-cia/2022/11/873054-re-max-oferece-franquia-no-segmento-imobiliario.html
-- Jornal do Comércio, Auxiliadora Predial: https://www.jornaldocomercio.com/cadernos/empresas-e-negocios/2024/05/1151470-auxiliadora-predial-preve-expansao-com-novas-franquias.html
-- Startups, Loft em Porto Alegre: https://startups.com.br/noticias/loft-chega-em-porto-alegre-e-expande-presenca-nacional/
-- InfoJobs, Crédito Real: https://www.infojobs.com.br/empresa-credito-real__958640.aspx
-- InfoJobs, vaga RE/MAX: https://www.infojobs.com.br/vaga-de-corretora-imoveis-em-sao-paulo__11440232.aspx
-- Credipronto, comissão: https://www.credipronto.com.br/?p=8535
-- Sienge, comissão em lançamentos: https://www.sienge.com.br/blog/gestao-de-comissao-de-vendas/
-- Pass and Earn, eXp: https://passandearn.com/commission-splits/exp-realty/
-- Forbes Brasil, eXp: https://forbes.com.br/forbes-tech/2021/02/exclusivo-imobiliaria-digital-nativa-na-nuvem-comeca-a-operar-no-brasil/
-- Business Wire, KW São Paulo: https://www.businesswire.com/news/home/20211215005072/en/Keller-Williams-Expands-into-So-Paulo-Brazil-Amid-Worldwide-Momentum
-- Cays, KW São Paulo: https://www.cays.com/keller-williams-expands-global-footprint-to-sao-paulo-brazil/
-- UniCEUB, BR House: https://repositorio.uniceub.br/jspui/bitstream/235/8013/1/51307109.pdf
+
+- Jornal do Comércio, RE/MAX RS: <https://www.jornaldocomercio.com/colunas/empresarios-e-cia/2022/11/873054-re-max-oferece-franquia-no-segmento-imobiliario.html>
+- Jornal do Comércio, Auxiliadora Predial: <https://www.jornaldocomercio.com/cadernos/empresas-e-negocios/2024/05/1151470-auxiliadora-predial-preve-expansao-com-novas-franquias.html>
+- Startups, Loft em Porto Alegre: <https://startups.com.br/noticias/loft-chega-em-porto-alegre-e-expande-presenca-nacional/>
+- InfoJobs, Crédito Real: <https://www.infojobs.com.br/empresa-credito-real__958640.aspx>
+- InfoJobs, vaga RE/MAX: <https://www.infojobs.com.br/vaga-de-corretora-imoveis-em-sao-paulo__11440232.aspx>
+- Credipronto, comissão: <https://www.credipronto.com.br/?p=8535>
+- Sienge, comissão em lançamentos: <https://www.sienge.com.br/blog/gestao-de-comissao-de-vendas/>
+- Pass and Earn, eXp: <https://passandearn.com/commission-splits/exp-realty/>
+- Forbes Brasil, eXp: <https://forbes.com.br/forbes-tech/2021/02/exclusivo-imobiliaria-digital-nativa-na-nuvem-comeca-a-operar-no-brasil/>
+- Business Wire, KW São Paulo: <https://www.businesswire.com/news/home/20211215005072/en/Keller-Williams-Expands-into-So-Paulo-Brazil-Amid-Worldwide-Momentum>
+- Cays, KW São Paulo: <https://www.cays.com/keller-williams-expands-global-footprint-to-sao-paulo-brazil/>
+- UniCEUB, BR House: <https://repositorio.uniceub.br/jspui/bitstream/235/8013/1/51307109.pdf>
 
 Recrutamento, funil e objeções
-- Rework: https://resources.rework.com/pt/libraries/real-estate-growth/agent-recruitment-strategy
-- RISMedia: https://rismedia.com/?p=48043
-- The Real Estate Trainer, recrutar experientes: https://therealestatetrainer.com/how-to-recruit-experienced-agents/
-- Recruiting Insight: https://recruitinginsight.net/?p=16843
-- InfoJobs, consultor de expansão no RS: https://www.infojobs.com.br/vaga-de-consultor-expansao-recrutamento-em-rio-grande-do-sul__11869234.aspx
-- Scribd, script de recrutamento: https://www.scribd.com/document/602249513/Agent-Recruiting-Script
-- Scribd, objeções: https://www.scribd.com/document/559384204/Objection-Handlers
-- Inmobiliario.do: https://inmobiliario.do/pt/dicas-para-recrutar-agentes-imobiliarios-a-formula-para-atrair-e-reter-os-melhores/
-- The Close, objeções: https://theclose.com/real-estate-objection-handlers
-- The Real Estate Trainer, objeções: https://therealestatetrainer.com/overcoming-listing-presentation-objections/
-- Portas, networking: https://portas.com.br/para-corretores/carreira-desenvolvimento/networking-no-mercado-imobiliario-como-construir-relacoes-poderosas/
-- Vista, contratar corretor: https://vistasoft.com.br/contratar-corretor-imoveis
-- Vista, incentivo: https://vistasoft.com.br/incentivo-para-corretores
-- SP Imóvel, retenção: https://www.spimovel.com.br/blog/o-que-uma-imobiliaria-precisa-fazer-para-reter-corretores-de-imoveis/3763/
-- Coverflex, onboarding: https://www.coverflex.com/pt/blog/onboarding-guia-pratico
+
+- Rework: <https://resources.rework.com/pt/libraries/real-estate-growth/agent-recruitment-strategy>
+- RISMedia: <https://rismedia.com/?p=48043>
+- The Real Estate Trainer, recrutar experientes: <https://therealestatetrainer.com/how-to-recruit-experienced-agents/>
+- Recruiting Insight: <https://recruitinginsight.net/?p=16843>
+- InfoJobs, consultor de expansão no RS: <https://www.infojobs.com.br/vaga-de-consultor-expansao-recrutamento-em-rio-grande-do-sul__11869234.aspx>
+- Scribd, script de recrutamento: <https://www.scribd.com/document/602249513/Agent-Recruiting-Script>
+- Scribd, objeções: <https://www.scribd.com/document/559384204/Objection-Handlers>
+- Inmobiliario.do: <https://inmobiliario.do/pt/dicas-para-recrutar-agentes-imobiliarios-a-formula-para-atrair-e-reter-os-melhores/>
+- The Close, objeções: <https://theclose.com/real-estate-objection-handlers>
+- The Real Estate Trainer, objeções: <https://therealestatetrainer.com/overcoming-listing-presentation-objections/>
+- Portas, networking: <https://portas.com.br/para-corretores/carreira-desenvolvimento/networking-no-mercado-imobiliario-como-construir-relacoes-poderosas/>
+- Vista, contratar corretor: <https://vistasoft.com.br/contratar-corretor-imoveis>
+- Vista, incentivo: <https://vistasoft.com.br/incentivo-para-corretores>
+- SP Imóvel, retenção: <https://www.spimovel.com.br/blog/o-que-uma-imobiliaria-precisa-fazer-para-reter-corretores-de-imoveis/3763/>
+- Coverflex, onboarding: <https://www.coverflex.com/pt/blog/onboarding-guia-pratico>
 
 Eventos e entidades
-- Câmara de Porto Alegre, sessão do Dia do Corretor: https://www.camarapoa.rs.gov.br/draco/sessoes_plenarias/83737/1661865362.pdf
-- Câmara de Porto Alegre, Salão do Imóvel (2011): https://www.camarapoa.rs.gov.br/draco/processos/113933/036752011PLL_PROJETO_151861512_738.pdf
-- CBIC, Encontro de Incorporadores 2026 Sul: https://cbic.org.br/inscricoes-abertas-para-o-fiergs-apresenta-encontro-cbic-de-incorporadores-e-construtores-2026-sul/
-- CBIC, Happy Hour: https://cbic.org.br/happy-hour-do-mercado-imobiliario-promove-debate-sobre-cenario-e-perspectivas-do-setor-em-porto-alegre/
-- Salão do Imóvel & Techcon (Chapecó): https://files.clicrdc.com.br/wp-content/uploads/2026/07/Salao-do-Imovel-Techcon-Apresentacao-OK-1.pdf
-- FIABCI, Prêmio Master Imobiliário: https://fiabci.org/en/news-room/view/569
-- Visite São Paulo, Convenção Secovi: https://visitesaopaulo.com/evento/convencao-secovi-2026-2026/
-- Portas, calendário de eventos: https://portas.com.br/eventos-do-mercado-imobiliario/
-- ZAP, guia de Gramado: https://www.zapimoveis.com.br/guia-de-cidades/rs+gramado/
-- apto.vc, corretores de Porto Alegre: https://apto.vc/corretores/regioes/br/rs/porto-alegre
+
+- Câmara de Porto Alegre, sessão do Dia do Corretor: <https://www.camarapoa.rs.gov.br/draco/sessoes_plenarias/83737/1661865362.pdf>
+- Câmara de Porto Alegre, Salão do Imóvel (2011): <https://www.camarapoa.rs.gov.br/draco/processos/113933/036752011PLL_PROJETO_151861512_738.pdf>
+- CBIC, Encontro de Incorporadores 2026 Sul: <https://cbic.org.br/inscricoes-abertas-para-o-fiergs-apresenta-encontro-cbic-de-incorporadores-e-construtores-2026-sul/>
+- CBIC, Happy Hour: <https://cbic.org.br/happy-hour-do-mercado-imobiliario-promove-debate-sobre-cenario-e-perspectivas-do-setor-em-porto-alegre/>
+- Salão do Imóvel & Techcon (Chapecó): <https://files.clicrdc.com.br/wp-content/uploads/2026/07/Salao-do-Imovel-Techcon-Apresentacao-OK-1.pdf>
+- FIABCI, Prêmio Master Imobiliário: <https://fiabci.org/en/news-room/view/569>
+- Visite São Paulo, Convenção Secovi: <https://visitesaopaulo.com/evento/convencao-secovi-2026-2026/>
+- Portas, calendário de eventos: <https://portas.com.br/eventos-do-mercado-imobiliario/>
+- ZAP, guia de Gramado: <https://www.zapimoveis.com.br/guia-de-cidades/rs+gramado/>
+- apto.vc, corretores de Porto Alegre: <https://apto.vc/corretores/regioes/br/rs/porto-alegre>
 
 Legislação, ética e jurisprudência
-- Lei 6.530/78 (Câmara): https://www2.camara.leg.br/legin/fed/lei/1970-1979/lei-6530-12-maio-1978-365766-normaatualizada-pl.html
-- CRECI-SP, legislação atualizada: https://www.crecisp.gov.br/Files/notify/3f61a9c0-0346-4c63-8f5f-2041fa64bf84_legislacaoatualizada-2.pdf
-- Legisweb: https://www.legisweb.com.br/legislacao/?id=81952
-- Jornal Contábil: https://jornalcontabil.com.br/noticia/corretores-de-imoveis-nova-lei-traz-inseguranca-vinculo-empregaticio/
-- Law Insider, modelo de contrato: https://www.lawinsider.com/pt/contracts/cQc7S1QCsDq
-- Jus.com.br, contrato de associação: https://jus.com.br/artigos/37206/contrato-de-associacao-corretor-de-imoveis
-- Senado, PLS 365/2017: https://legis.senado.leg.br/sdleg-getter/documento?dm=7209888
-- Migalhas, STF 2024: https://www.migalhas.com.br/quentes/404266/1-turma-do-stf-cassa-vinculo-de-emprego-de-corretor-de-imoveis
-- Lex, TST 2025: https://www.lex.com.br/corretora-de-imoveis-pejotizada-tem-vinculo-de-emprego-afastado/
-- Conjur, TRT-4 (2017): https://www.conjur.com.br/2017-out-01/corretor-autonomo-presta-contas-empregado-trt//?print=1
-- OAB-RS: https://www2.oabrs.org.br/jornalDaOrdem/corretora-de-imoveis-tem-vinculo-de-emprego-negado-com-grupo-imobiliario/47521
-- SP Imóvel, proteção da imobiliária: https://www.spimovel.com.br/blog/corretor-pode-entrar-com-acao-trabalhista-como-a-imobiliaria-pode-se-proteger/3995/
-- Portas, ética e Código do CRECI: https://portas.com.br/para-corretores/etica-profissional-no-mercado-imobiliario-e-codigo-do-creci/
-- CRECI-SC via condominiosc, exclusividade: https://condominiosc.com.br/secoes/mercado-condominial/6177-creci-sc-fiscaliza-e-orienta-condominios-sobre-atuacao-de-clandestinos-nas-negociacoes-imobiliarias
-- Migalhas, exclusividade: https://www.migalhas.com.br/depeso/343565/a-exclusividade-dirigida-nos-contratos-de-intermediacao-imobiliaria
-- SP Imóvel, tabela de corretagem: https://www.spimovel.com.br/blog/nova-regra-sobre-a-tabela-de-corretagem/2589/
-- CRECI-ES, LGPD: https://crecies.gov.br/o-que-e-a-lgpd
-- Conjur, tributação da comissão (conteúdo não lido): https://www.conjur.com.br/2024-dez-04/comissao-a-corretores-no-setor-imobiliario-e-no-carf/
+
+- Lei 6.530/78 (Câmara): <https://www2.camara.leg.br/legin/fed/lei/1970-1979/lei-6530-12-maio-1978-365766-normaatualizada-pl.html>
+- CRECI-SP, legislação atualizada: <https://www.crecisp.gov.br/Files/notify/3f61a9c0-0346-4c63-8f5f-2041fa64bf84_legislacaoatualizada-2.pdf>
+- Legisweb: <https://www.legisweb.com.br/legislacao/?id=81952>
+- Jornal Contábil: <https://jornalcontabil.com.br/noticia/corretores-de-imoveis-nova-lei-traz-inseguranca-vinculo-empregaticio/>
+- Law Insider, modelo de contrato: <https://www.lawinsider.com/pt/contracts/cQc7S1QCsDq>
+- Jus.com.br, contrato de associação: <https://jus.com.br/artigos/37206/contrato-de-associacao-corretor-de-imoveis>
+- Senado, PLS 365/2017: <https://legis.senado.leg.br/sdleg-getter/documento?dm=7209888>
+- Migalhas, STF 2024: <https://www.migalhas.com.br/quentes/404266/1-turma-do-stf-cassa-vinculo-de-emprego-de-corretor-de-imoveis>
+- Lex, TST 2025: <https://www.lex.com.br/corretora-de-imoveis-pejotizada-tem-vinculo-de-emprego-afastado/>
+- Conjur, TRT-4 (2017): <https://www.conjur.com.br/2017-out-01/corretor-autonomo-presta-contas-empregado-trt//?print=1>
+- OAB-RS: <https://www2.oabrs.org.br/jornalDaOrdem/corretora-de-imoveis-tem-vinculo-de-emprego-negado-com-grupo-imobiliario/47521>
+- SP Imóvel, proteção da imobiliária: <https://www.spimovel.com.br/blog/corretor-pode-entrar-com-acao-trabalhista-como-a-imobiliaria-pode-se-proteger/3995/>
+- Portas, ética e Código do CRECI: <https://portas.com.br/para-corretores/etica-profissional-no-mercado-imobiliario-e-codigo-do-creci/>
+- CRECI-SC via condominiosc, exclusividade: <https://condominiosc.com.br/secoes/mercado-condominial/6177-creci-sc-fiscaliza-e-orienta-condominios-sobre-atuacao-de-clandestinos-nas-negociacoes-imobiliarias>
+- Migalhas, exclusividade: <https://www.migalhas.com.br/depeso/343565/a-exclusividade-dirigida-nos-contratos-de-intermediacao-imobiliaria>
+- SP Imóvel, tabela de corretagem: <https://www.spimovel.com.br/blog/nova-regra-sobre-a-tabela-de-corretagem/2589/>
+- CRECI-ES, LGPD: <https://crecies.gov.br/o-que-e-a-lgpd>
+- Conjur, tributação da comissão (conteúdo não lido): <https://www.conjur.com.br/2024-dez-04/comissao-a-corretores-no-setor-imobiliario-e-no-carf/>
