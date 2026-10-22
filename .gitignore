@@ -15,7 +15,20 @@ Voxia/Identidade Visual/
 # Formulários de briefing e relatórios (materiais internos, não publicáveis)
 Voxia/Relatórios e Briefings/
 
+# Listas de leads (dados de prospecção, não publicáveis)
+Voxia/Leads/
+
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Scraper de Google Maps (prospeccao Voxia): contem dados de contato de terceiros
+google-maps-scraper-kit/
+
+# Material de clientes da Voxia (privado)
+Voxia/Clientes/
+
+# Pesquisas e relatorios internos (raiz e o site somosvoxia.com; nao publicar)
+reports/
+research_notes/
