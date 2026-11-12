@@ -1,21 +1,26 @@
-# Materiais pessoais de recolocação (não devem ir para o repositório público)
-CLAUDE.md
-Novo Emprego Bruno/
+# Este repositorio publica so o site da Voxia (somosvoxia.com).
+# Tudo fica de fora por padrao; so os arquivos do site abaixo sao liberados.
+# Pasta nova criada no projeto ja nasce protegida, sem precisar mexer aqui.
+/*
 
-# Configuração e agentes do Claude Code
-.claude/
+# Site (raiz, servida pelo GitHub Pages)
+!/.gitignore
+!/.markdownlint-cli2.jsonc
+!/CNAME
+!/index.html
+!/content.json
+!/bruno.png
+!/og-image.png
+!/robots.txt
+!/sitemap.xml
 
-# Pesquisa e análise interna da Voxia (não é conteúdo de publicação)
-Voxia/Pesquisa-Empreendimento-Reputacao.pdf
-Voxia/pesquisa-empreendimento-crivo.html
-
-# Manual de marca da Voxia (mantido privado)
-Voxia/Identidade Visual/
-
-# Formulários de briefing e relatórios (materiais internos, não publicáveis)
-Voxia/Relatórios e Briefings/
+# Copia do site dentro da pasta da Voxia (o resto de Voxia/ segue privado)
+!/Voxia/
+/Voxia/*
+!/Voxia/voxia-site/
 
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
 desktop.ini
+__pycache__/
