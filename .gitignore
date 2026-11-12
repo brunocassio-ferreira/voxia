@@ -14,11 +14,6 @@
 !/robots.txt
 !/sitemap.xml
 
-# Copia do site dentro da pasta da Voxia (o resto de Voxia/ segue privado)
-!/Voxia/
-/Voxia/*
-!/Voxia/voxia-site/
-
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
